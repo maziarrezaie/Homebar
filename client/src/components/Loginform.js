@@ -25,7 +25,7 @@ export class Regform extends Component {
 
   addUser = () => {
     axios
-      .post("http://localhost:5000/users/add", this.state.newUser)
+      .post("http://localhost:5000/neuUsers/add", this.state.newUser)
       .then(res => {
         console.log(res);
       });
@@ -35,7 +35,7 @@ export class Regform extends Component {
     return (
       <div className="Add new Coktail to the List">
         <div className="headline">
-          <span>Registrierung</span>
+          <span>Login</span>
         </div>
         <div className="addcontainer">
           <form
@@ -94,22 +94,24 @@ export class Regform extends Component {
               required
             />
             <br></br>
-            <label className="fildlable">Password:</label>
+            <label className="fildlable" >
+              Password:
+            </label>
             <input
               className="addfild"
               id="upassword"
-              type="password"
-              minlength="4"
+              type="password" minlength="4"
               onChange={this.changeHandler}
               required
             />
             <br></br>
-            <label className="fildlable">Password wiederholen:</label>
+            <label className="fildlable" >
+              Password wiederholen:
+            </label>
             <input
               className="addfild"
               id="upasswordwieder"
-              type="password"
-              minlength="4"
+              type="password" minlength="4"
               onChange={this.changeHandler}
               required
             />
