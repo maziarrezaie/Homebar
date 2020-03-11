@@ -8,8 +8,9 @@ import Techniken from "./mainareaComponents/Techniken";
 import Equipment from "./mainareaComponents/Equipment";
 import Add from "./mainareaComponents/Addform";
 import Reg from "./mainareaComponents/Regform";
+import Log from "./mainareaComponents/Loginform";
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 export class MainArea extends Component {
   render() {
@@ -26,6 +27,7 @@ export class MainArea extends Component {
         <Route path="/gefunden" exact component={Gefunden} />
         <Route path="/register" exact component={Reg} />
         <Route path="/addneudrink" exact component={Add} />
+        <Route path="/loginform" exact component={Log} />
       </div>
     );
   }

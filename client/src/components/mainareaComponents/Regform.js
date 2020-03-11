@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 const axios = require("axios");
 export class Regform extends Component {
   state = {
@@ -52,13 +53,13 @@ export class Regform extends Component {
                 required
                 onChange={this.changeHandler}
               >
-                <option value="">Anrede</option>
+                <option value="">Anrede*</option>
                 <option value="Weiblich">Weiblich</option>
                 <option value="Männlich">Männlich</option>
               </select>
               <br></br>
             </div>
-            <label className="fildlable">Name:</label>
+            <label className="fildlable">Name*:</label>
             <input
               className="addfild"
               id="uname"
@@ -67,7 +68,7 @@ export class Regform extends Component {
               required
             />
             <br></br>
-            <label className="fildlable">Vorname:</label>
+            <label className="fildlable">Vorname*:</label>
             <input
               className="addfild"
               id="uvorname"
@@ -76,7 +77,7 @@ export class Regform extends Component {
               required
             />
             <br></br>
-            <label className="fildlable">E-Mail Adresse:</label>
+            <label className="fildlable">E-Mail Adresse*:</label>
             <input
               className="addfild"
               id="uemailadress"
@@ -85,7 +86,7 @@ export class Regform extends Component {
               required
             />
             <br></br>
-            <label className="fildlable">Geburtsdatum:</label>
+            <label className="fildlable">Geburtsdatum*:</label>
             <input
               className="addfild"
               id="ugeburtsdatum"
@@ -94,7 +95,7 @@ export class Regform extends Component {
               required
             />
             <br></br>
-            <label className="fildlable">Password:</label>
+            <label className="fildlable">Password*:</label>
             <input
               className="addfild"
               id="upassword"
@@ -104,7 +105,7 @@ export class Regform extends Component {
               required
             />
             <br></br>
-            <label className="fildlable">Password wiederholen:</label>
+            <label className="fildlable">Password wiederholen*:</label>
             <input
               className="addfild"
               id="upasswordwieder"

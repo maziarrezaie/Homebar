@@ -6,11 +6,14 @@
 }
 
 /* ==============================HEADER============================== */
-
+.hl{
+  height: 100px;
+}
 .header {
   display: flexbox;
   text-align: center;
   width: inherit;
+  height: 50px;
   position: fixed;
   top: 0px;
   background-color: #000000;
@@ -25,14 +28,17 @@
   /* margin-top: 0px; */
   /* margin-left: 100px; */
   background-color: #000000;
-  padding: 3px;
+  text-decoration: none;
+  padding: 3px 6px;
+  margin-right: 20px;
+  margin-bottom: 30px;
   border: 1px solid #e2001a;
   width: 80px;
   height: 30px;
   font-size: 16px;
   position: relative;
-  left: 10%;
-  top: 0px;
+  left: 20%;
+  top: -10px;
 }
 
 .redlinetop {
@@ -41,6 +47,10 @@
   background-color: #e2001a;
   margin-top: 6px;
 }
+.modal-title {
+  color: gray !important;
+  font-size: 24px !important;
+}
 /* ==============================END HEADER============================== */
 
 /* ==============================MITTE============================== */
@@ -48,7 +58,7 @@
   width: inherit;
   display: flex;
   justify-content: start;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 .side {
   width: 20%;
@@ -59,7 +69,7 @@
   height: 100%;
 }
 
-.Pagelink{
+.Pagelink {
   color: white;
   text-decoration: none;
 }
@@ -204,6 +214,39 @@ h5 {
   border: solid 2px #e2001a;
 }
 
+.bntlogin {
+  background-color: #007206;
+  border: solid 1px #949494;
+  color: #eceded;
+  font-size: 24px;
+  padding: 0px 20px;
+  margin: 4px;
+}
+.bntlogin:hover {
+  background-color: black;
+  border: solid 1px #007206;
+}
+.bntabbrechen {
+  background-color: #e2001a;
+  border: solid 1px #949494;
+  color: #eceded;
+  font-size: 24px;
+  padding: 0px 20px;
+  margin: 4px;
+}
+.bntabbrechen:hover {
+  background-color: black;
+  border: solid 1px #e2001a;
+  color: #eceded;
+}
+.logorout {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: inherit;
+  height: 50px;
+}
+
 .nachoben {
   width: 60px;
   height: auto;
@@ -249,7 +292,7 @@ h5 {
   height: 90px;
   margin-top: 0px;
   background-color: #eceded;
-  overflow:scroll;
+  overflow: scroll;
   color: black;
 }
 .rezept {
@@ -278,7 +321,7 @@ h5 {
   height: 90px;
   margin-top: 0px;
   background-color: #eceded;
-  overflow:scroll
+  overflow: scroll;
 }
 .schalter {
   display: flex;

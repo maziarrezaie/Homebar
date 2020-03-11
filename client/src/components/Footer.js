@@ -14,7 +14,8 @@ export class Footer extends Component {
           <a href="mailto:mail@gilanis.de">
             <img className="footicon" src={Mail} alt="E-Mail" alt="E-Mail" />
           </a>
-          <a href="https://www.instagram.com/tayo_no_hikari/?hl=de"
+          <a
+            href="https://www.instagram.com/tayo_no_hikari/?hl=de"
             target="_blank"
           >
             <img className="footicon" src={Insta} alt="Instergram" />
@@ -23,7 +24,7 @@ export class Footer extends Component {
             href="https://www.instagram.com/tayo_no_hikari/?hl=de"
             target="_blank"
           >
-            <img class="footicon" src={Face} alt="Facebook" />
+            <img className="footicon" src={Face} alt="Facebook" />
           </a>
         </div>
         <div className="footlink">
