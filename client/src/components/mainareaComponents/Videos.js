@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import Oben from "../images/nachoben.png";
 import { Link } from "react-router-dom";
-import videojs from 'video.js'
-
-
-
-
 
 export class Videos extends Component {
   render() {
@@ -19,7 +14,6 @@ export class Videos extends Component {
             <video width="320" height="240" controls></video>
           </div>
         </div>
-
         <a href="top">
           <img className="nachoben" src={Oben} alt="Nach oben" />
         </a>
