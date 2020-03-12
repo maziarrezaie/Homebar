@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Oben from "../images/nachoben.png";
 import GeschPic from "../images/14A.JPG";
+import { Link } from "react-router-dom";
 
 export class Welcom extends Component {
   render() {
@@ -65,10 +66,15 @@ export class Welcom extends Component {
           Zutaten langsam auf die Rückseite des Barlöffels, der ganz dicht auf
           die oberste Schichtfläche gehalten wird, gegossen werden.
         </p>
-        {/* <button className="bntred" type="submit">
-          Cocktail Generator
-        </button> */}
-        <a href="top">
+        <div>
+          <button className="bntgreen" type="submit">
+            <Link to="/suche" className="Pagelink">
+              Cocktail Generator
+            </Link>
+          </button>
+        </div>
+        <a href="#top">
+          {" "}
           <img className="nachoben" src={Oben} alt="Nach oben" />
         </a>
       </div>

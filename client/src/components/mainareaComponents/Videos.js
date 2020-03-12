@@ -14,7 +14,15 @@ export class Videos extends Component {
             <video width="320" height="240" controls></video>
           </div>
         </div>
-        <a href="top">
+        <div>
+          <button className="bntgreen" type="submit">
+            <Link to="/suche" className="Pagelink">
+              Cocktail Generator
+            </Link>
+          </button>
+        </div>
+        <a href="#top">
+          {" "}
           <img className="nachoben" src={Oben} alt="Nach oben" />
         </a>
       </div>

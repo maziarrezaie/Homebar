@@ -27,9 +27,10 @@ export class Footer extends Component {
             <img className="footicon" src={Face} alt="Facebook" />
           </a>
         </div>
-        <div className="footlink">
-          <p className="linkfooter">Impressum</p>
-          <p className="linkfooter">Datenschutz</p>
+        <div className="footlinkbox">
+          <span>Impressum</span>
+          <br></br>
+          <span>Datenschutz</span>
         </div>
       </div>
     );

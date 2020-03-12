@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Oben from "../images/nachoben.png";
 
 const axios = require("axios");
 export class Addform extends Component {
@@ -189,9 +190,14 @@ export class Addform extends Component {
               </select>
             </div>
             <br></br>
+            <input className="addpic" type="file" />
             <input className="addbutton" type="submit" value="Add Now" />
           </form>
         </div>
+        <a href="#top">
+          {" "}
+          <img className="nachoben" src={Oben} alt="Nach oben" />
+        </a>
       </div>
     );
   }

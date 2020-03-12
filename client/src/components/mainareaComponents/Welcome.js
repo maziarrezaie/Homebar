@@ -22,7 +22,7 @@ export class Welcom extends Component {
           </span>
         </div>
         <div>
-          <button className="cg" type="submit">
+          <button className="bntgreen" type="submit">
             <Link to="/suche" className="Pagelink">
               Cocktail Generator
             </Link>

@@ -75,10 +75,10 @@ export class Suche extends Component {
     return (
       <div className="welcome">
         <div className="headline">
-          <span>Suche nach deine Vorstellung</span>
+          <span>Wie soll der Cocktail sein?</span>
         </div>
 
-        <p className="inhalttextCentriert">Wie soll der Cocktail sein?</p>
+        <br></br>
 
         <button className="bntw" type="text">
           Stärke:

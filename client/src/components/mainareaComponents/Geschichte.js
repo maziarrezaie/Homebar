@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Oben from "../images/nachoben.png";
 import GeschPic from "../images/hahnenkampf1.jpg";
+import { Link } from "react-router-dom";
 
 export class Welcom extends Component {
   render() {
@@ -50,7 +51,13 @@ export class Welcom extends Component {
           in der Gastronomie erobert, nur die Hahnenkämpfe sehen irgendwie
           inzwischen anders aus.
         </p>
-
+        <div>
+          <button className="bntgreen" type="submit">
+            <Link to="/suche" className="Pagelink">
+              Cocktail Generator
+            </Link>
+          </button>
+        </div>
         <a href="#top">
           {" "}
           <img className="nachoben" src={Oben} alt="Nach oben" />

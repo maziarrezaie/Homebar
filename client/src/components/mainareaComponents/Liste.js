@@ -9,18 +9,20 @@ export class Liste extends Component {
         <div className="headline">
           <span>Liste der alle rezepte auf HOMEBAR</span>
         </div>
-        <button className="cg" type="submit">
+        <div>
+          <button className="bntgreen" type="submit">
             <Link to="/suche" className="Pagelink">
               Cocktail Generator
             </Link>
           </button>
-        <div>
-        <span className="inhalttextLinks" id="liste">
-          NOCH LEER
-         
-        </span>
         </div>
-        <a href="top">
+        <div>
+          <span className="inhalttextLinks" id="liste">
+            NOCH LEER
+          </span>
+        </div>
+        <a href="#top">
+          {" "}
           <img className="nachoben" src={Oben} alt="Nach oben" />
         </a>
       </div>

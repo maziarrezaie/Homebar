@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Logo from "./images/Homebar-logo-600px72.png";
+import Logo from "./images/GilanisHomebar-2020_ok_250x100_white.png";
 import "../App.css";
 import { Link } from "react-router-dom";
 

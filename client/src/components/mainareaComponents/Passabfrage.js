@@ -71,6 +71,9 @@ export class Passabfrage extends Component {
                 />
               </Link>
               <input className="bntlogin" type="submit" value="Code Abfragen" />
+              {/* <Link to="/register">
+                <input className="bntgray" type="button" value="Registrieren" />
+              </Link> */}
             </div>
           </form>
         </div>
