@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 const axios = require("axios");
 export class Regform extends Component {
   state = {
@@ -12,6 +11,13 @@ export class Regform extends Component {
       ugeburtsdatum: "",
       upassword: "",
       upasswordwieder: ""
+    },
+    pass: false
+  };
+
+  passcontrol = e => {
+    if (this.state.newUser.upassword === this.state.newUser.upasswordwieder) {
+      this.setState({ pass: true });
     }
   };
 
@@ -100,18 +106,22 @@ export class Regform extends Component {
               className="addfild"
               id="upassword"
               type="password"
-              minlength="4"
+              minlength="6"
+              placeholder=" Passwort muss 6 Zeichen beinhalten"
               onChange={this.changeHandler}
               required
             />
             <br></br>
             <label className="fildlable">Password wiederholen*:</label>
             <input
-              className="addfild"
+              className={this.state.pass ? "addfildgreen" : "addfildred"}
               id="upasswordwieder"
               type="password"
-              minlength="4"
-              onChange={this.changeHandler}
+              minlength="6"
+              onChange={e => {
+                this.passcontrol(e);
+                this.changeHandler(e);
+              }}
               required
             />
 

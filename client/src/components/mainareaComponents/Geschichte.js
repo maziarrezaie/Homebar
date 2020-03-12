@@ -50,8 +50,8 @@ export class Welcom extends Component {
           in der Gastronomie erobert, nur die Hahnenkämpfe sehen irgendwie
           inzwischen anders aus.
         </p>
-        
-        <a href="#hl">
+
+        <a href="#top">
           {" "}
           <img className="nachoben" src={Oben} alt="Nach oben" />
         </a>

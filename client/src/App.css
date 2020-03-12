@@ -6,7 +6,18 @@
 }
 
 /* ==============================HEADER============================== */
-.hl{
+.addform {
+  width: 40%;
+}
+.infotext {
+  width: 100%;
+}
+
+.anylink {
+  color: white;
+}
+
+.hl {
   height: 100px;
 }
 .header {
@@ -156,8 +167,11 @@ h5 {
   margin: 15px 0px 0px 20px;
 }
 .inhalttextCentriert {
+  width: 80%;
   font-size: 18px;
-  text-align: center;
+  margin-bottom: 16px;
+
+  margin-top: 20px;
 }
 .inhalttextLinks {
   font-size: 18px;
@@ -185,6 +199,17 @@ h5 {
 .bntred:hover {
   background-color: #007206;
   border: solid 2px #eceded;
+}
+
+.bntredclicked {
+  background-color: #000000;
+  border: solid 2px #949494;
+  color: #eceded;
+  /* width: 220px; */
+  font-size: 24px;
+  padding: 2px 6px;
+  margin: 4px;
+  margin-bottom: 20px;
 }
 .cg {
   background-color: #e2001a;
@@ -215,6 +240,7 @@ h5 {
 }
 
 .bntlogin {
+  height: 30px;
   background-color: #007206;
   border: solid 1px #949494;
   color: #eceded;
@@ -227,6 +253,7 @@ h5 {
   border: solid 1px #007206;
 }
 .bntabbrechen {
+  height: 30px;
   background-color: #e2001a;
   border: solid 1px #949494;
   color: #eceded;
@@ -248,11 +275,11 @@ h5 {
 }
 
 .nachoben {
-  width: 60px;
+  width: 40px;
   height: auto;
   position: fixed;
   right: 20px;
-  bottom: 100px;
+  bottom: 60px;
 }
 .thumbpic {
   width: 240px;
@@ -286,6 +313,24 @@ h5 {
   font-size: 16px;
   padding: 0px;
   margin-top: 4px;
+}
+.addfildred {
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  padding: 0px;
+  margin-top: 4px;
+  border: solid 2px #e2001a;
+  background-color: #f7b2ba;
+}
+.addfildgreen {
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  padding: 0px;
+  margin-top: 4px;
+  border: solid 2px #007206;
+  background-color: #c5f0c7;
 }
 .addfildzubreitung {
   width: 100%;
@@ -352,7 +397,12 @@ h5 {
 #rezeptuebertrag {
   color: black;
 }
-
+.videos {
+  width: 90%;
+  margin-top: 20px;
+  /* background-color:  #f3efef; */
+  /* opacity: 0.5; */
+}
 /* ==============================END MITTE============================== */
 
 /* ======================================FOOTER======================================= */

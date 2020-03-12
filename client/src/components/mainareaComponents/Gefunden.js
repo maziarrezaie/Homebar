@@ -12,30 +12,28 @@ export class Welcom extends Component {
           <span>gefundene Cocktails</span>
         </div>
         <div className="gefundenpics">
-        <img className="thumbpic" src={Pic} alt="Thumb" />
-        <img className="thumbpic" src={Pic2} alt="Thumb" />
-        <img className="thumbpic" src={Pic} alt="Thumb" />
-        <img className="thumbpic" src={Pic2} alt="Thumb" />
-        <img className="thumbpic" src={Pic} alt="Thumb" />
-        <img className="thumbpic" src={Pic2} alt="Thumb" />
-        <img className="thumbpic" src={Pic} alt="Thumb" />
-        <img className="thumbpic" src={Pic2} alt="Thumb" />
-        <img className="thumbpic" src={Pic} alt="Thumb" />
-        <img className="thumbpic" src={Pic2} alt="Thumb" />
-        <img className="thumbpic" src={Pic} alt="Thumb" />
-        <img className="thumbpic" src={Pic2} alt="Thumb" />
+          <img className="thumbpic" src={Pic} alt="Thumb" />
+          <img className="thumbpic" src={Pic2} alt="Thumb" />
+          <img className="thumbpic" src={Pic} alt="Thumb" />
+          <img className="thumbpic" src={Pic2} alt="Thumb" />
+          <img className="thumbpic" src={Pic} alt="Thumb" />
+          <img className="thumbpic" src={Pic2} alt="Thumb" />
+          <img className="thumbpic" src={Pic} alt="Thumb" />
+          <img className="thumbpic" src={Pic2} alt="Thumb" />
+          <img className="thumbpic" src={Pic} alt="Thumb" />
+          <img className="thumbpic" src={Pic2} alt="Thumb" />
+          <img className="thumbpic" src={Pic} alt="Thumb" />
+          <img className="thumbpic" src={Pic2} alt="Thumb" />
         </div>
-        
-
 
         <button className="bntgreen" type="submit">
-        <Link to="/suche" className="Pagelink">
-          Zurück zu Suche
+          <Link to="/suche" className="Pagelink">
+            Zurück zu Suche
           </Link>
         </button>
         <br></br>
 
-        <a href="#hl">
+        <a href="#top">
           {" "}
           <img className="nachoben" src={Oben} alt="Nach oben" />
         </a>

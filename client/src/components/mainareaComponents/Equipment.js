@@ -41,8 +41,8 @@ export class Welcom extends Component {
           in unterschiedlichen Größen und Stärken sowie Spießchen für die
           Oliven, Kirschen oder Perlzwiebeln, die in die jeweiligen Drinks
           gestellt werden. Für unsere Retrofreaks gibt es da noch ein besonderes
-          Schmankerl, bei Manufaktum http://www.manufaktum.de gibt es noch
-          echte Stroh-halme... Wenn Du tierisch darauf stehst,Tropical- oder
+          Schmankerl, bei Manufaktum http://www.manufaktum.de gibt es noch echte
+          Stroh-halme... Wenn Du tierisch darauf stehst,Tropical- oder
           Fruchtdrinks zu mixen, gehört auch ein Blender an die Sonne. Wenn du
           aber nicht wie Wir täglich deinen eigenen huldigen willst (ist halt
           eine Finanzfrage), leih dir bei Muttern einfach einen Küchenmixer.
@@ -57,13 +57,13 @@ export class Welcom extends Component {
           Sektverschluss. Die Basti-Methode: Nicht lang schnacken, Kopp in
           Nacken! Für die Zubereitung von Crushed Ice gibt es auch etliche
           Methoden, aber die wirkungsvollste ist folgende: Ein mit Muskelschmalz
-          betriebener Eiscrusher gibt es schon für 20 Euro. Ach ja, natürlich oben
-          Eiswürfel rein, kurbeln, unten Crushed Ice raus.
+          betriebener Eiscrusher gibt es schon für 20 Euro. Ach ja, natürlich
+          oben Eiswürfel rein, kurbeln, unten Crushed Ice raus.
         </p>
         <button className="cg" type="submit">
           Cocktail Generator
         </button>
-        <a href="header">
+        <a href="top">
           <img className="nachoben" src={Oben} alt="Nach oben" />
         </a>
       </div>

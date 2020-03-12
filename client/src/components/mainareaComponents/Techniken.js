@@ -26,41 +26,49 @@ export class Welcom extends Component {
           enthalten sind, nicht so gut, gerinnen und setzen sich ab (so wie man
           Käse herstellt), da kommt uns ein Elektromixer, in Fachsprache Englich
           Blender zu Hilfe, der das Ganze quasi durchschlägt! Es gibt allgemein
-          vier Arten von Mixen:</p> 
-          <h5> Shaken:</h5>
-          <p className="inhalttextLinks">hierbei werden die Zutaten inkl.
-          Eiswürfel in den Shaker gegeben und beidhändig in waagerechter Haltung
-          in Schulterhöhe nach vorn und hinten bewegt. Nach ca. 10 Sekunden ist
-          das Getränk gut durchgemixt und gekühlt. Dabei soll man auf drei
-          Sachen achten: 1. man nehme immer den längsten Weg 2. die Bewegung ist
-          aus dem Ellebogen 3. Shake the Shaker, not yourself</p> 
-          <h5>Rühren:</h5>
-          <p className="inhalttextLinks"> hierbei
-          werden die Zutaten inkl. Eiswürfel ins Rührglas gegeben und mit der
-          Rückseite eines Barlöffels von unten nach oben gerührt.</p> 
-          <h5> Blenden:</h5>
-          <p className="inhalttextLinks">
+          vier Arten von Mixen:
+        </p>
+        <h5> Shaken:</h5>
+        <p className="inhalttextLinks">
+          hierbei werden die Zutaten inkl. Eiswürfel in den Shaker gegeben und
+          beidhändig in waagerechter Haltung in Schulterhöhe nach vorn und
+          hinten bewegt. Nach ca. 10 Sekunden ist das Getränk gut durchgemixt
+          und gekühlt. Dabei soll man auf drei Sachen achten: 1. man nehme immer
+          den längsten Weg 2. die Bewegung ist aus dem Ellebogen 3. Shake the
+          Shaker, not yourself
+        </p>
+        <h5>Rühren:</h5>
+        <p className="inhalttextLinks">
+          {" "}
+          hierbei werden die Zutaten inkl. Eiswürfel ins Rührglas gegeben und
+          mit der Rückseite eines Barlöffels von unten nach oben gerührt.
+        </p>
+        <h5> Blenden:</h5>
+        <p className="inhalttextLinks">
           hierbei werden die Zutaten inkl. Eiswürfel in den Blender-Becher
-          gegeben und ca. 10 Sekunden geschlagen.</p> 
-          <h5> Gastglas-Zubereitung:</h5>
-          <p className="inhalttextLinks"> hierbei
-          werden die Zutaten ins Gastglas auf Eis gegeben und je nach Rezept
-          noch gerührt oder geschichtet.</p> 
-          <h5> Schichten:</h5>
-          <p className="inhalttextLinks"> hierbei werden die Zutaten
-          nicht gemixt, sondern je nach Rezept mit oder ohne Eis aufeinander
-          geschichtet wobei die Zutaten, die dichter und von der Konsistenz
-          schwerer sind, zuerst ins Gastglas geschichtet werden. Damit die
-          Zutaten sich nicht miteinander mischen, werden sie mit Hilfe eines
-          Barlöffels ins Glas gegeben und zwar so, daß die Zutaten langsam auf
-          die Rückseite des Barlöffels, der ganz dicht auf die oberste
-          Schichtfläche gehalten wird, gegossen werden.
+          gegeben und ca. 10 Sekunden geschlagen.
+        </p>
+        <h5> Gastglas-Zubereitung:</h5>
+        <p className="inhalttextLinks">
+          {" "}
+          hierbei werden die Zutaten ins Gastglas auf Eis gegeben und je nach
+          Rezept noch gerührt oder geschichtet.
+        </p>
+        <h5> Schichten:</h5>
+        <p className="inhalttextLinks">
+          {" "}
+          hierbei werden die Zutaten nicht gemixt, sondern je nach Rezept mit
+          oder ohne Eis aufeinander geschichtet wobei die Zutaten, die dichter
+          und von der Konsistenz schwerer sind, zuerst ins Gastglas geschichtet
+          werden. Damit die Zutaten sich nicht miteinander mischen, werden sie
+          mit Hilfe eines Barlöffels ins Glas gegeben und zwar so, daß die
+          Zutaten langsam auf die Rückseite des Barlöffels, der ganz dicht auf
+          die oberste Schichtfläche gehalten wird, gegossen werden.
         </p>
         {/* <button className="bntred" type="submit">
           Cocktail Generator
         </button> */}
-        <a href="header">
-          
+        <a href="top">
           <img className="nachoben" src={Oben} alt="Nach oben" />
         </a>
       </div>

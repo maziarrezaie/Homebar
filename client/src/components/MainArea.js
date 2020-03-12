@@ -9,6 +9,10 @@ import Equipment from "./mainareaComponents/Equipment";
 import Add from "./mainareaComponents/Addform";
 import Reg from "./mainareaComponents/Regform";
 import Log from "./mainareaComponents/Loginform";
+import Pasver from "./mainareaComponents/Passabfrage";
+import Chpass from "./mainareaComponents/Changepasswort";
+import List from "./mainareaComponents/Liste";
+import Vid from "./mainareaComponents/Videos";
 
 import { Route } from "react-router-dom";
 
@@ -28,6 +32,10 @@ export class MainArea extends Component {
         <Route path="/register" exact component={Reg} />
         <Route path="/addneudrink" exact component={Add} />
         <Route path="/loginform" exact component={Log} />
+        <Route path="/passabfrage" exact component={Pasver} />
+        <Route path="/changepass" exact component={Chpass} />
+        <Route path="/liste" exact component={List} />
+        <Route path="/videos" exact component={Vid} />
       </div>
     );
   }

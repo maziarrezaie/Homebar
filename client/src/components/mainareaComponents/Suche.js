@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Oben from "../images/nachoben.png";
 import { Link } from "react-router-dom";
 
-
-
 const axios = require("axios");
 export class Suche extends Component {
   state = {
@@ -12,7 +10,14 @@ export class Suche extends Component {
       geschmack: "",
       basis: "",
       size: ""
+    },
+    classes: {
+      staerke: ["bntred", "bntred", "bntred", "bntred"],
+      geschmack: ["bntred", "bntred", "bntred", "bntred", "bntred", "bntred"],
+      basis: ["bntred", "bntred", "bntred", "bntred", "bntred", "bntred"],
+      size: ["bntred", "bntred", "bntred", "bntred"]
     }
+    /* classList: "bntred" */
   };
   setAnswers = e => {
     this.setState({
@@ -31,6 +36,41 @@ export class Suche extends Component {
       });
   };
 
+  resetBtn = arrayLength => {
+    var resetedArray = [];
+    for (let i = 0; i < arrayLength; i++) {
+      resetedArray.push("bntred");
+    }
+    return resetedArray;
+  };
+
+  fixButton = (e, arrayLength) => {
+    var group = e.target.name.split("_")[0];
+    var btnElem = e.target.id;
+
+    if (this.state.classes[group][btnElem] === "bntred") {
+      this.setState({
+        classes: {
+          ...this.state.classes,
+          [group]: {
+            ...this.resetBtn(arrayLength),
+            [[parseInt(btnElem)]]: "bntredclicked"
+          }
+        }
+      });
+    } else {
+      this.setState({
+        classes: {
+          ...this.state.classes,
+          [group]: {
+            ...this.resetBtn(arrayLength),
+            [[parseInt(btnElem)]]: "bntred"
+          }
+        }
+      });
+    }
+  };
+
   render() {
     return (
       <div className="welcome">
@@ -44,195 +84,278 @@ export class Suche extends Component {
           Stärke:
         </button>
         <br></br>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="staerke_0%ig"
-        >
-          0%ig
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="staerke_licht"
-        >
-          Leicht
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="staerke_stark"
-        >
-          Stark
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="staerke_extraStark"
-        >
-          Extra-Stark
-        </button>
-        <br></br>
+        <div id="staerke">
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 4);
+            }}
+            className={`${this.state.classes.staerke[0]}`}
+            type="submit"
+            name="staerke_0%ig"
+            id="0"
+          >
+            0%ig
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 4);
+            }}
+            className={`${this.state.classes.staerke[1]}`}
+            type="submit"
+            name="staerke_licht"
+            id="1"
+          >
+            Leicht
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 4);
+            }}
+            className={`${this.state.classes.staerke[2]}`}
+            id="2"
+            type="submit"
+            name="staerke_stark"
+          >
+            Stark
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 4);
+            }}
+            className={`${this.state.classes.staerke[3]}`}
+            id="3"
+            type="submit"
+            name="staerke_extraStark"
+          >
+            Extra-Stark
+          </button>
+        </div>
 
         <button className="bntw" type="text">
           Geschmack:
         </button>
         <br></br>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="geschmack_cremig"
-        >
-          Cremig
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="geschmack_fruchtig"
-        >
-          Fruchtig
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="geschmack_suess"
-        >
-          Süss
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="geschmack_sauer"
-        >
-          Sauer
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="geschmack_herb"
-        >
-          Herb
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="geschmack_scharf"
-        >
-          Scharf
-        </button>
-        <br></br>
+        <div id="geschmaeck">
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.geschmack[0]}`}
+            id="0"
+            type="submit"
+            name="geschmack_cremig"
+          >
+            Cremig
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.geschmack[1]}`}
+            id="1"
+            type="submit"
+            name="geschmack_fruchtig"
+          >
+            Fruchtig
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.geschmack[2]}`}
+            id="2"
+            type="submit"
+            name="geschmack_suess"
+          >
+            Süss
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.geschmack[3]}`}
+            id="3"
+            type="submit"
+            name="geschmack_sauer"
+          >
+            Sauer
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.geschmack[4]}`}
+            id="4"
+            type="submit"
+            name="geschmack_herb"
+          >
+            Herb
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.geschmack[5]}`}
+            id="5"
+            type="submit"
+            name="geschmack_scharf"
+          >
+            Scharf
+          </button>
+        </div>
 
         <button className="bntw" type="text">
           Basis:
         </button>
         <br></br>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="basis_wodka"
-        >
-          Wodka
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="basis_rum"
-        >
-          Rum
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="basis_tequila"
-        >
-          Tequila
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="basis_gin"
-        >
-          Gin
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="basis_whiskey"
-        >
-          Whiskey
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="basis_likoer"
-        >
-          Likör
-        </button>
-        <br></br>
+        <div id="basis">
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.basis[0]}`}
+            id="0"
+            type="submit"
+            name="basis_wodka"
+          >
+            Wodka
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.basis[1]}`}
+            id="1"
+            type="submit"
+            name="basis_rum"
+          >
+            Rum
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.basis[2]}`}
+            id="2"
+            type="submit"
+            name="basis_tequila"
+          >
+            Tequila
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.basis[3]}`}
+            id="3"
+            type="submit"
+            name="basis_gin"
+          >
+            Gin
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.basis[4]}`}
+            id="4"
+            type="submit"
+            name="basis_whiskey"
+          >
+            Whiskey
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 6);
+            }}
+            className={`${this.state.classes.basis[5]}`}
+            id="5"
+            type="submit"
+            name="basis_likoer"
+          >
+            Likör
+          </button>
+        </div>
 
         <button className="bntw" type="text">
           Size:
         </button>
         <br></br>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="size_kurz"
-        >
-          Kurz
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="size_lang"
-        >
-          Lang
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="size_extraLang"
-        >
-          Extra-Lang
-        </button>
-        <button
-          onClick={this.setAnswers}
-          className="bntred"
-          type="submit"
-          name="size_heiss"
-        >
-          Heiss
-        </button>
-        <br></br>
+        <div id="size">
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 4);
+            }}
+            className={`${this.state.classes.size[0]}`}
+            id="0"
+            type="submit"
+            name="size_kurz"
+          >
+            Kurz
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 4);
+            }}
+            className={`${this.state.classes.size[1]}`}
+            id="1"
+            type="submit"
+            name="size_lang"
+          >
+            Lang
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 4);
+            }}
+            className={`${this.state.classes.size[2]}`}
+            id="2"
+            type="submit"
+            name="size_extraLang"
+          >
+            Extra-Lang
+          </button>
+          <button
+            onClick={e => {
+              this.setAnswers(e);
+              this.fixButton(e, 4);
+            }}
+            className={`${this.state.classes.size[3]}`}
+            id="3"
+            type="submit"
+            name="size_heiss"
+          >
+            Heiss
+          </button>
+        </div>
 
-        <br></br>
         <button onClick={this.getDrinks} className="bntgreen" type="submit">
-        <Link to="/gefunden" className="Pagelink">
-          Senden
+          <Link to="/gefunden" className="Pagelink">
+            Senden
           </Link>
         </button>
         <br></br>
 
-        <a href="#hl">
+        <a href="#top">
           {" "}
           <img className="nachoben" src={Oben} alt="Nach oben" />
         </a>

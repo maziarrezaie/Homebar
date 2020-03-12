@@ -9,6 +9,9 @@ export class Sidebar extends Component {
         <Link to="/welcome" className="Pagelink">
           <li className="nav-link">HOMEBAR</li>
         </Link>
+        <Link to="/suche" className="Pagelink">
+          <li className="nav-link">Cocktail Generator</li>
+        </Link>
         <Link to="/geschichte" className="Pagelink">
           <li className="nav-link">Geschichte des Cocktails</li>
         </Link>
@@ -20,9 +23,12 @@ export class Sidebar extends Component {
         <Link to="/techniken" className="Pagelink">
           <li className="nav-link">Mix-Techniken</li>
         </Link>
-
-        <li className="nav-link">Liste aller Cocktails</li>
-        <li className="nav-link">Videos</li>
+        <Link to="/liste" className="Pagelink">
+          <li className="nav-link">Liste aller Cocktails</li>
+        </Link>
+        <Link to="/videos" className="Pagelink">
+          <li className="nav-link">Videos</li>
+        </Link>
       </ul>
     );
   }

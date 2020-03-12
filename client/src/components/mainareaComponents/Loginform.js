@@ -20,9 +20,11 @@ export class Loginform extends Component {
   };
 
   logUser = () => {
-    axios.post("http://localhost:5000/users", this.state.logUser).then(res => {
-      console.log(res);
-    });
+    axios
+      .post("http://localhost:5000/users/login", this.state.logUser)
+      .then(res => {
+        console.log(res);
+      });
   };
 
   /* ---------------------------------------------------------------------------------------- */
@@ -41,10 +43,6 @@ export class Loginform extends Component {
               this.logUser();
             }}
           >
-            <div className="schalter">
-              <br></br>
-            </div>
-
             <br></br>
 
             <br></br>
@@ -82,6 +80,12 @@ export class Loginform extends Component {
                 type="submit"
                 value="Jetzt Einlogen"
               />
+            </div>
+
+            <div>
+              <Link className="anylink" to="/passabfrage">
+                Passwort vergessen?
+              </Link>
             </div>
           </form>
         </div>
