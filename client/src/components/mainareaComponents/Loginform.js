@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
 const axios = require("axios");
+
 export class Loginform extends Component {
   state = {
     logUser: {
@@ -24,12 +24,13 @@ export class Loginform extends Component {
       .post("http://localhost:5000/users/login", this.state.logUser)
       .then(res => {
         console.log(res);
-        /* if(res.data.msg ==='success'){
-          alert()
-          window.location.href = '/welcome'
-        }else if(res.data.msg === 'failur'){
-
-        } */
+        if (res.data.msg === "user does not exist") {
+          alert(`This user does\'nt exist. Please Register First.`);
+          window.location.href = "/register";
+        } else if (res.data.token) {
+          localStorage.setItem("user", res.data.token);
+          window.location.href = "/welcome";
+        }
       });
   };
 
@@ -68,7 +69,7 @@ export class Loginform extends Component {
               className="addfild"
               id="upassword"
               type="password"
-              minlength="4"
+              minLength="4"
               onChange={this.changeHandler}
               required
             />

@@ -1,5 +1,6 @@
-var express = require("express");
-var router = express.Router();
+var router = require("express").Router();
+var jwt = require("jsonwebtoken");
+var env = require("dotenv");
 const MongoClient = require("mongodb").MongoClient;
 const url = `mongodb+srv://maziar:maziar123@cluster0-qxuag.mongodb.net/test?retryWrites=true&w=majority`;
 
@@ -12,14 +13,67 @@ router.post("/add", function(req, res) {
 
     dbo.collection("users").insertOne(user, (err, result) => {
       if (err) throw err;
-      res.send("User Registered Successfully");
+      if (!err) {
+        var token = jwt.sign(
+          {
+            anrede: result.anrede,
+            uname: result.uname,
+            uvorname: result.uvorname,
+            uemailadress: result.uemailadress,
+            ugeburstdatum: result.ugeburstdatum
+          },
+          `${process.env.SECRETKEY}`
+        );
+        res.status(200).send({ token: token });
+      } else {
+        res.status(200).send({ msg: "failur" });
+      }
       con.close();
     });
   });
 });
 
-/* router.post('/add', function(req, res) {
-  console.log(req.body);
-}); */
+//check user information in database for login process
+router.post("/login", (req, res, next) => {
+  MongoClient.connect(url, { useUnifiedTopology: true }, (err, con) => {
+    if (err) {
+      console.log(err);
+    }
+
+    const database = con.db("likor");
+    database.collection("users").findOne(
+      {
+        uemailadress: `${req.body.uemailadress}`,
+        upassword: `${req.body.upassword}`
+      },
+      (err, result) => {
+        if (err) {
+          console.log(err);
+        }
+
+        //if user doesn't exist in database
+        if (result === null) {
+          res.status(200).send({ msg: "user does not exist" });
+        }
+
+        //if user exist in database
+        if (result) {
+          var token = jwt.sign(
+            {
+              anrede: result.anrede,
+              uname: result.uname,
+              uvorname: result.uvorname,
+              uemailadress: result.uemailadress,
+              ugeburstdatum: result.ugeburstdatum
+            },
+            `${process.env.SECRETKEY}`
+          );
+        }
+        res.send({ token: token });
+        con.close();
+      }
+    );
+  });
+});
 
 module.exports = router;

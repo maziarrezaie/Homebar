@@ -35,12 +35,13 @@ export class Regform extends Component {
       .post("http://localhost:5000/users/add", this.state.newUser)
       .then(res => {
         console.log(res);
-         /* if(res.data.msg ==='success'){
-          alert()
-          window.location.href = '/welcome'
-        }else if(res.data.msg === 'failur'){
-
-        } */
+        if (res.data.token) {
+          localStorage.setItem("user", res.data.token);
+          alert("Successfully Registered!");
+          window.location.href = "/welcome";
+        } else if (res.data.msg === "failur") {
+          alert("User not registered. Please try again.");
+        }
       });
   };
 
