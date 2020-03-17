@@ -191,7 +191,11 @@ export class Addform extends Component {
             </div>
             <br></br>
             <input className="addpic" type="file" />
-            <input className="addbutton" type="submit" value="Add Now" />
+            <input
+              className="addbutton"
+              type="submit"
+              value="Add this new Drink to the Database"
+            />
           </form>
         </div>
         <a href="#top">

@@ -24,6 +24,12 @@ export class Loginform extends Component {
       .post("http://localhost:5000/users/login", this.state.logUser)
       .then(res => {
         console.log(res);
+        /* if(res.data.msg ==='success'){
+          alert()
+          window.location.href = '/welcome'
+        }else if(res.data.msg === 'failur'){
+
+        } */
       });
   };
 

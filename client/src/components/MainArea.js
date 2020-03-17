@@ -6,7 +6,7 @@ import Gefunden from "./mainareaComponents/Gefunden";
 import Geschichte from "./mainareaComponents/Geschichte";
 import Techniken from "./mainareaComponents/Techniken";
 import Equipment from "./mainareaComponents/Equipment";
-import Add from "./mainareaComponents/Addform";
+import Add from "./mainareaComponents/Addneudrinkform";
 import Reg from "./mainareaComponents/Regform";
 import Log from "./mainareaComponents/Loginform";
 import Pasver from "./mainareaComponents/Passabfrage";

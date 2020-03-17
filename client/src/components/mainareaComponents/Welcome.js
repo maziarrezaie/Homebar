@@ -7,7 +7,7 @@ export class Welcom extends Component {
     return (
       <div className="welcome">
         <div className="headline">
-          <span>Wilkommen zu dein Home-Bar</span>
+          <span>Wilkommen bei Gilanis Homebar</span>
         </div>
         <div className="addcontainer">
           <span className="inhalttextCentriert">

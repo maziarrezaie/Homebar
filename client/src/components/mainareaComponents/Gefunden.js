@@ -16,14 +16,6 @@ export class Welcom extends Component {
           <img className="thumbpic" src={Pic2} alt="Thumb" />
           <img className="thumbpic" src={Pic} alt="Thumb" />
           <img className="thumbpic" src={Pic2} alt="Thumb" />
-          <img className="thumbpic" src={Pic} alt="Thumb" />
-          <img className="thumbpic" src={Pic2} alt="Thumb" />
-          <img className="thumbpic" src={Pic} alt="Thumb" />
-          <img className="thumbpic" src={Pic2} alt="Thumb" />
-          <img className="thumbpic" src={Pic} alt="Thumb" />
-          <img className="thumbpic" src={Pic2} alt="Thumb" />
-          <img className="thumbpic" src={Pic} alt="Thumb" />
-          <img className="thumbpic" src={Pic2} alt="Thumb" />
         </div>
 
         <button className="bntgreen" type="submit">
