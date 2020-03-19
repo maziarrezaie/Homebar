@@ -2,7 +2,7 @@ var router = require("express").Router();
 var jwt = require("jsonwebtoken");
 var env = require("dotenv");
 const MongoClient = require("mongodb").MongoClient;
-const url = `mongodb+srv://maziar:maziar123@cluster0-qxuag.mongodb.net/test?retryWrites=true&w=majority`;
+const url = `mongodb+srv://admin:admin123!@cluster0-r0sxn.mongodb.net/test?retryWrites=true&w=majority`;
 
 /* Register User. */
 router.post("/add", function(req, res) {

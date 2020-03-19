@@ -56,17 +56,16 @@
     Crezept: "2cl Grenadine<br>2cl Zitronensaft<br>4cl Ananassaft<br>4cl Orangensaft<br>8cl Maracujasaft", 
     cmachart: "Alle zutaten in Shaker auf 4 Eiswürfel geben, 10 Sekunden Shaken, 4 Eiswürfeln in ein Balon Glass geben, Cocktail durch ein Strainer abseihen, mit  dekorieren"},
 
-    {cname: "Whiskey Sour", staerke: "stark", geschmack: "herb", basis: "whiskey", size: "kurz", 
-    Crezept: "6cl Whiskey<br>2cl Zitronensaft<br>1 TL Puderzucker<br>1 dash Angostura", 
-    cmachart: "Alle zutaten in Shaker auf 4 Eiswürfel geben, 10 Sekunden Shaken, 6 Eiswürfeln in ein Tumbler geben, Cocktail durch ein Strainer abseihen, mit Limetenscheibe dekorieren"},
+    {cname: "Cosmopolitan", staerke: "normal", geschmack: "herb", basis: "Wodka", size: "kurz", 
+    Crezept: "4cl Wodka<br>2cl Orangenl<br>2cl Limettensaft<br>6cl Cranberrysaft", 
+    cmachart: "Alle zutaten in Shaker auf 4 Eiswürfel geben, 10 Sekunden Shaken, 3 Eiswürfeln in ein Cocktail schale geben, Cocktail durch ein Strainer abseihen, mit Limetenscheibe dekorieren"},
 
     {cname: "Zombie", staerke: "extrastark", geschmack: "fruchtig", basis: "rum", size: "extralang", 
     Crezept: "3cl weißer Rum<br>3cl brauner Rum<br>2cl hochprozentiger Rum<br>2cl Apricot Brandy<br>2 Zitronensaft<br>1 dash Grenadine<br>6 Anananssaft", 
     cmachart: "Alle zutaten in Shaker auf 4 Eiswürfel geben, 10 Sekunden Shaken, 5 Eiswürfeln in ein grosses Glass geben, Cocktail durch ein Strainer abseihen, mit Ananas und Pasionfruchte dekorieren"},
 
-    {cname: "Long Island Ice Tea", staerke: "extrastark", geschmack: "herb", basis: "gin", size: "extralang", 
-    Crezept: "3cl Gin<br>2cl weißer Rum<br>2cl Orangenlikör<br>2cl Wodka<br>2 Zitronensaft<br>2cl Lime Juice<br>6cl Cola-Limonade", 
-    cmachart: "Alle zutaten ausser Cola-Limonade in Shaker auf 4 Eiswürfel geben, 10 Sekunden Shaken, 5 Eiswürfeln in ein grosses Glass geben, Cocktail durch ein Strainer abseihen, mit Cola-Limonade aufvollen, mit Limeten und Zitronen dekorieren"},
-
+    {cname: "Swimmingpool ", staerke: "normal", geschmack: "cramig", basis: "rum", size: "kurz", 
+    Crezept: "5cl weißer Rum<br>2cl Wodka<br>2cl Blue Curacao<br>2cl Sahne<br>6cl Ananassaft<br>", 
+    cmachart: "Alle zutaten in Blender auf 3 Eiswürfel geben, 10 Sekunden Blenden, 3 EL Crasheis in ein grosser Cocktail-Glass geben, Cocktail durch ein Strainer abseihen, mit Ananasscheibe dekorieren"},
 
 ]

@@ -20,6 +20,7 @@ export class Welcom extends Component {
             <br />
             Wir wünschen dir viel Spaß!
           </span>
+          {/* <img src="http://localhost:5000/img/10A.JPG" alt="pic" /> */}
         </div>
         <div>
           <button className="bntgreen" type="submit">

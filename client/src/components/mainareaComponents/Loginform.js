@@ -29,6 +29,13 @@ export class Loginform extends Component {
           window.location.href = "/register";
         } else if (res.data.token) {
           localStorage.setItem("user", res.data.token);
+          localStorage.setItem(
+            "uvorname",
+            JSON.parse(window.atob(res.data.token.split(".")[1])).uvorname
+          );
+          console.log(
+            JSON.parse(window.atob(localStorage.getItem("user").split(".")[1]))
+          );
           window.location.href = "/welcome";
         }
       });

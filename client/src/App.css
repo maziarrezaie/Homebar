@@ -23,7 +23,9 @@
   height: 100px;
 }
 .header {
-  display: flexbox;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   text-align: center;
   width: inherit;
   height: 80px;
@@ -37,6 +39,15 @@
   height: 80%;
   margin-top: 8px;
   margin-left: 5%;
+}
+.btnsheader {
+  display: flex-box;
+  width: 20%;
+  height: inherit;
+  padding-top: 50px;
+  margin-left: 100px;
+  position: absolute;
+  right: 10%;
 }
 .linkeins {
   color: #f3efef;
@@ -304,7 +315,7 @@ h5 {
   right: 20px;
   bottom: 60px;
 }
-.nachoben:hover{
+.nachoben:hover {
   box-shadow: 0px 0px 50px #55f00e;
 }
 .thumbpic {
@@ -472,7 +483,6 @@ h5 {
   margin: 10px 0px 10px 40px;
   height: 20px;
   max-width: auto;
-
 }
 .footicon:hover {
   box-shadow: 0px 0px 30px #55f00e;

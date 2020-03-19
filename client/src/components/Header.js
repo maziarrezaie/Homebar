@@ -10,14 +10,31 @@ export class Header extends Component {
         <Link to="/welcome">
           <img className="hblogo" src={Logo} alt="Homebar Logo" />
         </Link>
-
-        <Link className="linkeins" to="/loginform">
-          LOGIN
-        </Link>
-
-        <Link className="linkeins" to="/register">
-          Neu bei HOMEBAR?
-        </Link>
+        {localStorage.getItem("user") ? (
+          <div className="btnsheader">
+            <Link
+              className="linkeins"
+              onClick={() => {
+                localStorage.clear();
+                window.location.href = "/welcome";
+              }}
+            >
+              Logout
+            </Link>
+            <Link className="linkeins">
+              {"Hello " + localStorage.getItem("uvorname")}
+            </Link>
+          </div>
+        ) : (
+          <div className="btnsheader">
+            <Link className="linkeins" to="/loginform">
+              LOGIN
+            </Link>
+            <Link className="linkeins" to="/register">
+              Neu bei HOMEBAR?
+            </Link>
+          </div>
+        )}
 
         {/* <div className="redlinetop"></div> */}
       </div>
