@@ -472,10 +472,10 @@ h5 {
   color: black;
 }
 .videos {
-  width: 90%;
-  margin-top: 20px;
-  /* background-color:  #f3efef; */
-  /* opacity: 0.5; */
+  width: 320;
+  margin: 20px 10px 0px 10px;
+border: solid 1px #ffffff;
+  
 }
 /* ==============================END MITTE============================== */
 

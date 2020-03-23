@@ -19,6 +19,7 @@ export class Welcom extends Component {
         </div>
 
         <div className="ergiebnisres">
+          <div className="auwpicres" id="awpic"></div>
           {/* <img className="auwpicres" id="awpic" src={Pic} alt="Thumb" /> */}
           <span className="rezeptrespons" id="rezres">
             {/* 

@@ -16,6 +16,7 @@ export class Addform extends Component {
       eis: "",
       menge: "",
       zutat: "",
+
       cpic: ""
     }
   };
@@ -25,6 +26,16 @@ export class Addform extends Component {
       newDrink: {
         ...this.state.newDrink,
         [e.target.id]: e.target.value
+      }
+    });
+  };
+
+  changeHandlerFile = e => {
+    this.setState({
+      ...this.state,
+      newDrink: {
+        ...this.state.newDrink,
+        cpic: e.target.files[0]
       }
     });
   };
@@ -44,8 +55,21 @@ export class Addform extends Component {
   };
 
   addDrinks = () => {
+    const formData = new FormData();
+    formData.append("file", this.state.newDrink.cpic);
+    const config = {
+      headers: {
+        "content-type": "multipart/form-data"
+      }
+    };
+
     axios
-      .post("http://localhost:5000/drinks/add", this.state.newDrink)
+      .post(
+        "http://localhost:5000/drinks/add",
+        this.state.newDrink,
+        formData,
+        config
+      )
       .then(res => {
         console.log(res);
       });
@@ -60,6 +84,7 @@ export class Addform extends Component {
         <div className="addcontainer">
           <form
             className="addform"
+            
             onSubmit={e => {
               /* e.preventDefault(); */
               this.addDrinks();
