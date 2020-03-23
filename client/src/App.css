@@ -318,12 +318,34 @@ h5 {
 .nachoben:hover {
   box-shadow: 0px 0px 50px #55f00e;
 }
+.gefundenpics {
+  width: inherit;
+  background-color: rgb(84, 235, 134);
+  padding: 20px;
+}
 .thumbpic {
-  width: 240px;
-  height: 240px;
+  width: 100px;
+  height: auto;
   border: solid 2px #eceded;
   box-shadow: 0px 0px 14px #eceded;
   margin: 20px 10px;
+}
+.ergiebnisres {
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  background-color: rgb(235, 207, 84);
+  padding: 30px;
+}
+.auwpicres {
+  width: 280px;
+  height: auto;
+  border: solid 4px #ee110a;
+  box-shadow: 0px 0px 14px #eceded;
+  margin: 0px 10px;
+}
+.rezeptrespons {
+  color: #1696eb;
 }
 .blende {
   width: 54%;
@@ -392,13 +414,13 @@ h5 {
   margin-top: 4px;
   box-shadow: 0px 3px 5px inset#636161;
 }
-.rezept {
+.zutaten {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 40px;
 }
-.addfildrezept {
+.addfildzutaten {
   width: 33%;
   height: initial;
   font-size: 16px;
@@ -446,7 +468,7 @@ h5 {
   background-color: #007206;
   border: solid 1px #e2001a;
 }
-#rezeptuebertrag {
+#zutatenuebertrag {
   color: black;
 }
 .videos {

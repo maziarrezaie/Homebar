@@ -10,12 +10,13 @@ export class Addform extends Component {
       staerke: "",
       geschmack: "",
       size: "",
-      rezept: [],
+      zutaten: [],
       zubreitung: "",
       technik: "",
       eis: "",
       menge: "",
-      zutat: ""
+      zutat: "",
+      cpic: ""
     }
   };
 
@@ -28,12 +29,12 @@ export class Addform extends Component {
     });
   };
 
-  rezeptContent = () => {
+  zutatenContent = () => {
     this.setState({
       newDrink: {
         ...this.state.newDrink,
-        rezept: [
-          ...this.state.newDrink.rezept,
+        zutaten: [
+          ...this.state.newDrink.zutaten,
           { menge: this.state.newDrink.menge, zutat: this.state.newDrink.zutat }
         ],
         menge: "",
@@ -82,7 +83,7 @@ export class Addform extends Component {
               required
             />
             <br></br>
-            <label className="fildlable">Staerke:</label>
+            <label className="fildlable">Stärke:</label>
             <input
               className="addfild"
               id="staerke"
@@ -103,37 +104,35 @@ export class Addform extends Component {
             <label className="fildlable">Size:</label>
             <input
               className="addfild"
-              id="geschmak"
+              id="size"
               type="text"
               onChange={this.changeHandler}
               required
             />
             <br></br>
             <label className="fildlable">Rezept:</label>
-            <div className="rezept">
+            <div className="zutaten">
               <input
-                className="addfildrezept"
+                className="addfildzutaten"
                 id="menge"
                 type="text"
                 value={this.state.newDrink.menge}
                 placeholder="Menge in cl"
                 onChange={this.changeHandler}
-                required
               />
               <input
-                className="addfildrezept"
+                className="addfildzutaten"
                 id="zutat"
                 type="text"
                 value={this.state.newDrink.zutat}
                 placeholder="Zutat"
                 onChange={this.changeHandler}
-                required
               />
               <button
                 className="addzutat"
                 onClick={e => {
                   e.preventDefault();
-                  this.rezeptContent();
+                  this.zutatenContent();
                 }}
                 required
               >
@@ -142,11 +141,11 @@ export class Addform extends Component {
             </div>
             <br></br>
             <div className="uebertrag">
-              {this.state.newDrink.rezept
-                ? this.state.newDrink.rezept.map((item, index) => {
+              {this.state.newDrink.zutaten
+                ? this.state.newDrink.zutaten.map((item, index) => {
                     console.log(item.menge + "_" + item.zutat);
                     return (
-                      <span id="rezeptuebertrag" key={index}>
+                      <span id="zutatenuebertrag" key={index}>
                         {item.menge + " " + item.zutat} <br></br>
                       </span>
                     );
@@ -190,7 +189,16 @@ export class Addform extends Component {
               </select>
             </div>
             <br></br>
-            <input className="addpic" type="file" />
+
+            {/* =======================add image================= */}
+            <input
+              className="addpic"
+              id="cpic"
+              type="file"
+              onChange={this.changeHandler}
+              required
+            />
+
             <input
               className="addbutton"
               type="submit"
