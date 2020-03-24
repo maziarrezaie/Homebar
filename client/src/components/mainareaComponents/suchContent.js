@@ -3,7 +3,7 @@
 
 [
     {cname: "Pina Colada", staerke: "normal", geschmack: "cremig", basis: "rum", size: "lang", 
-    Crezept: [{menge: "5cl", stof: "weisser Rum"},{2cl Coconut Cream},{2 Sahne},{10cl Ananassaft}], 
+    Crezept: "5cl weisser Rum, 2cl Coconut Cream,2 Sahne,10cl Ananassaft", 
     cmachart: "Alle zutaten in Blender auf 4 Eiswürfel geben, 10 Sekunden Blenden, 3 EL Crasheis in ein grosser Balon-Glass geben, Cocktail durch ein Strainer abseihen, mit Ananasscheibe dekorieren"},
 
     {cname: "Coconut Kiss", staerke: "0%ig", geschmack: "cremig", basis: "", size: "lang", 

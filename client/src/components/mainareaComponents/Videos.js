@@ -17,8 +17,8 @@ export class Videos extends Component {
 
   render() {
     const opts = {
-      width: "320",
-      height: "240",
+      width: "280",
+      height: "180",
 
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
@@ -33,19 +33,74 @@ export class Videos extends Component {
         <div className="headline">
           <span>Videos</span>
         </div>
-        <div className="addcontainer">
-          <YouTube
-            className="videos"
-            videoId="BCsFV12JiwI"
-            opts={opts}
-            onReady={this.videoOnReady}
-          />
-          <YouTube
-            className="videos"
-            videoId="lSkxPlfGoCc"
-            opts={opts}
-            onReady={this.videoOnReady}
-          />
+
+        <div className="vidscontainer">
+          <div className="viddiv">
+            <YouTube
+              className="videos"
+              videoId="LQnAnxNkIrk"
+              opts={opts}
+              onReady={this.videoOnReady}
+            />
+            <p className="galeritext">
+              Cocktailbar Casablanca bei Gilaniś Auf Livestyle Teil1: Equipment
+            </p>
+          </div>
+          <div className="viddiv">
+            <YouTube
+              className="videos"
+              videoId="FO9vCfcue_w"
+              opts={opts}
+              onReady={this.videoOnReady}
+            />
+            <p className="galeritext">
+              Cocktailbar Casablanca bei Gilaniś Auf Livestyle Teil2: Tequila
+              Sunrise
+            </p>
+          </div>
+          <div className="viddiv">
+            <YouTube
+              className="videos"
+              videoId="4BcEN41NcdE"
+              opts={opts}
+              onReady={this.videoOnReady}
+            />
+            <p className="galeritext">
+              Cocktailbar Casablanca bei Gilaniś Auf Livestyle Teil3: Mojito
+            </p>
+          </div>
+          <div className="viddiv">
+            <YouTube
+              className="videos"
+              videoId="BOM8EEQyUWI"
+              opts={opts}
+              onReady={this.videoOnReady}
+            />
+            <p className="galeritext">
+              Cocktailbar Casablanca bei Gilaniś Auf Livestyle Teil4:
+              Cosmopolitan
+            </p>
+          </div>
+          <div className="viddiv">
+            <YouTube
+              className="videos"
+              videoId="-dCmqY5yIHA"
+              opts={opts}
+              onReady={this.videoOnReady}
+            />
+            <p className="galeritext">
+              Cocktailbar Casablanca bei Gilaniś Auf Livestyle. "Showeffekt"
+            </p>
+          </div>
+          <div className="viddiv">
+            <YouTube
+              className="videos"
+              videoId="BCsFV12JiwI"
+              opts={opts}
+              onReady={this.videoOnReady}
+            />
+            <p className="galeritext">Gilaniś Cocktails an Bocholter Markt</p>
+          </div>
           {/* <div className="videos">
             <video width="320" height="240" controls></video>
           </div> */}

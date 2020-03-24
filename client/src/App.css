@@ -471,11 +471,31 @@ h5 {
 #zutatenuebertrag {
   color: black;
 }
+.vidscontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.viddiv {
+  width: 280px;
+  border: solid 1px #ffffff;
+  background-color: #2d2d2d;
+  margin: 8px;
+}
+.viddiv:hover {
+  border: solid 1px #5eaadd;
+}
 .videos {
-  width: 320;
-  margin: 20px 10px 0px 10px;
-border: solid 1px #ffffff;
-  
+  width: 280px;
+  /* margin: 20px 10px 0px 10px; */
+  /* border: solid 1px #ffffff; */
+}
+.galeritext {
+  color: white;
+  margin: 3px 5px;
 }
 /* ==============================END MITTE============================== */
 
