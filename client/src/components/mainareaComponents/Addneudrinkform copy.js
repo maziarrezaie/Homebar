@@ -84,6 +84,7 @@ export class Addform extends Component {
         <div className="addcontainer">
           <form
             className="addform"
+            
             onSubmit={e => {
               /* e.preventDefault(); */
               this.addDrinks();
@@ -98,68 +99,41 @@ export class Addform extends Component {
               required
             />
             <br></br>
+            <label className="fildlable">Basis:</label>
+            <input
+              className="addfild"
+              id="basis"
+              type="text"
+              onChange={this.changeHandler}
+              required
+            />
             <br></br>
-            <div className="schalter">
-              <select
-                className="wahlfeld"
-                id="basis"
-                onChange={this.changeHandler}
-                required
-              >
-                <option value="">Basis </option>
-                <option value="Wodka">Wodka</option>
-                <option value="Rum">Rum</option>
-                <option value="Tequila">Tequila</option>
-                <option value="Gin">Gin</option>
-                <option value="Whiskey">Whiskey</option>
-                <option value="Likör">Likör</option>
-              </select>
-
-              <select
-                className="wahlfeld"
-                id="staerke"
-                onChange={this.changeHandler}
-                required
-              >
-                <option value="">Stärke </option>
-                <option value="0%ig">0%ig</option>
-                <option value="Licht">Licht</option>
-                <option value="Stark">Stark</option>
-                <option value="Extra-Stark">Extra-Stark</option>
-              </select>
-            </div>
+            <label className="fildlable">Stärke:</label>
+            <input
+              className="addfild"
+              id="staerke"
+              type="text"
+              onChange={this.changeHandler}
+              required
+            />
             <br></br>
-
-            <div className="schalter">
-              <select
-                className="wahlfeld"
-                id="geschmack"
-                onChange={this.changeHandler}
-                required
-              >
-                <option value="">Geschmack</option>
-                <option value="Cremig">Cremig</option>
-                <option value="Fruchtig">Fruchtig</option>
-                <option value="Süss">Süss</option>
-                <option value="Sauer">Sauer</option>
-                <option value="Herb">Herb</option>
-                <option value="Scharf">Scharf</option>
-              </select>
-              <br></br>
-
-              <select
-                className="wahlfeld"
-                id="size"
-                onChange={this.changeHandler}
-                required
-              >
-                <option value="">Size </option>
-                <option value="Kurz">Kurz</option>
-                <option value="Lang">Lang</option>
-                <option value="Extra-Lang">Extra-Lang</option>
-                <option value="Heiss">Heiss</option>
-              </select>
-            </div>
+            <label className="fildlable">Geschmack:</label>
+            <input
+              className="addfild"
+              id="geschmack"
+              type="text"
+              onChange={this.changeHandler}
+              required
+            />
+            <br></br>
+            <label className="fildlable">Size:</label>
+            <input
+              className="addfild"
+              id="size"
+              type="text"
+              onChange={this.changeHandler}
+              required
+            />
             <br></br>
             <label className="fildlable">Rezept:</label>
             <div className="zutaten">
@@ -213,7 +187,6 @@ export class Addform extends Component {
               required
             />
             <br></br>
-            <br></br>
             <div className="schalter">
               <select
                 className="wahlfeld"
@@ -250,7 +223,6 @@ export class Addform extends Component {
               onChange={this.changeHandler}
               required
             />
-            <br></br>
 
             <input
               className="addbutton"
