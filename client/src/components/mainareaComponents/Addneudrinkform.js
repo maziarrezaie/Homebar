@@ -243,12 +243,21 @@ export class Addform extends Component {
             <br></br>
 
             {/* =======================add image================= */}
+            <label className="fildlable">Cocktail Foto:</label>
             <input
-              className="addpic"
+              className="addfile"
               id="cpic"
               type="file"
               onChange={this.changeHandler}
               required
+            />
+            <br></br>
+            <label className="fildlable">Video:</label>
+            <input
+              className="addfile"
+              id="cvid"
+              type="file"
+              onChange={this.changeHandler}
             />
             <br></br>
 
