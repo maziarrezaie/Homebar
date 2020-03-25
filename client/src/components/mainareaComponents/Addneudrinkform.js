@@ -89,12 +89,13 @@ export class Addform extends Component {
               this.addDrinks();
             }}
           >
-            <label className="fildlable">Cocktail Name:</label>
+            <label className="fildlable">Cocktail Name*:</label>
             <input
               className="addfild"
               id="cname"
               type="text"
               onChange={this.changeHandler}
+              placeholder="Auf Rechtschreibung achten"
               required
             />
             <br></br>
@@ -106,7 +107,7 @@ export class Addform extends Component {
                 onChange={this.changeHandler}
                 required
               >
-                <option value="">Basis </option>
+                <option value="">Basis*</option>
                 <option value="Wodka">Wodka</option>
                 <option value="Rum">Rum</option>
                 <option value="Tequila">Tequila</option>
@@ -121,7 +122,7 @@ export class Addform extends Component {
                 onChange={this.changeHandler}
                 required
               >
-                <option value="">Stärke </option>
+                <option value="">Stärke*</option>
                 <option value="0%ig">0%ig</option>
                 <option value="Licht">Licht</option>
                 <option value="Stark">Stark</option>
@@ -137,7 +138,7 @@ export class Addform extends Component {
                 onChange={this.changeHandler}
                 required
               >
-                <option value="">Geschmack</option>
+                <option value="">Geschmack*</option>
                 <option value="Cremig">Cremig</option>
                 <option value="Fruchtig">Fruchtig</option>
                 <option value="Süss">Süss</option>
@@ -153,7 +154,7 @@ export class Addform extends Component {
                 onChange={this.changeHandler}
                 required
               >
-                <option value="">Size </option>
+                <option value="">Size* </option>
                 <option value="Kurz">Kurz</option>
                 <option value="Lang">Lang</option>
                 <option value="Extra-Lang">Extra-Lang</option>
@@ -168,7 +169,7 @@ export class Addform extends Component {
                 id="menge"
                 type="text"
                 value={this.state.newDrink.menge}
-                placeholder="Menge in cl"
+                placeholder="Menge in cl*"
                 onChange={this.changeHandler}
               />
               <input
@@ -176,7 +177,7 @@ export class Addform extends Component {
                 id="zutat"
                 type="text"
                 value={this.state.newDrink.zutat}
-                placeholder="Zutat"
+                placeholder="Zutat*"
                 onChange={this.changeHandler}
               />
               <button
@@ -204,7 +205,7 @@ export class Addform extends Component {
                 : null}
             </div>
             <br></br>
-            <label className="fildlable">Zubreitung:</label>
+            <label className="fildlable">Zubreitung*:</label>
             <textarea
               className="addfildzubreitung"
               id="zubreitung"
@@ -221,7 +222,7 @@ export class Addform extends Component {
                 onChange={this.changeHandler}
                 required
               >
-                <option value="">Technik </option>
+                <option value="">Technik* </option>
                 <option value="Shaken">Shaken</option>
                 <option value="Blenden">Blenden</option>
                 <option value="Ruhren">Ruhren</option>
@@ -234,7 +235,7 @@ export class Addform extends Component {
                 onChange={this.changeHandler}
                 required
               >
-                <option value="">Servie eis</option>
+                <option value="">Servie eis*</option>
                 <option value="Wuerfeleis">Wuerfeleis</option>
                 <option value="Crasheis">Crasheis</option>
                 <option value="Ohne Eis">Ohne Eis</option>
@@ -243,7 +244,7 @@ export class Addform extends Component {
             <br></br>
 
             {/* =======================add image================= */}
-            <label className="fildlable">Cocktail Foto:</label>
+            <label className="fildlable">Cocktail Foto*:</label>
             <input
               className="addfile"
               id="cpic"
@@ -252,6 +253,7 @@ export class Addform extends Component {
               required
             />
             <br></br>
+            <br></br>
             <label className="fildlable">Video:</label>
             <input
               className="addfile"
@@ -259,6 +261,7 @@ export class Addform extends Component {
               type="file"
               onChange={this.changeHandler}
             />
+            <br></br>
             <br></br>
 
             <input

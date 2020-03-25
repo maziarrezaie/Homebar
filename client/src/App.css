@@ -454,6 +454,7 @@ h5 {
   width: 50%;
   height: inherit;
   border: none;
+  font-size: large;
 }
 .addbutton {
   background-color: #007206;
