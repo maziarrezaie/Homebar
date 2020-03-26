@@ -3,9 +3,30 @@ import Oben from "../images/nachoben.png";
 import Pic from "../images/gallerieCosmopolitan.png";
 import Pic2 from "../images/galleriePicasso.png";
 import { Link } from "react-router-dom";
+import YouTube from "react-youtube";
 
 export class Welcom extends Component {
+  videoOnReady(event) {
+    // access to player in all event handlers via event.target
+    /* event.target.playVideoAt(50); */
+    //50 sanieh
+    //event.target.getVideoEmbedCode();
+    event.target.pauseVideo();
+    //event.target.playVideoAt(10);
+  }
+
   render() {
+    const opts = {
+      width: "280",
+      height: "180",
+
+      playerVars: {
+        // https://developers.google.com/youtube/player_parameters
+        autoplay: 2
+      }
+    };
+
+    const { videoId } = this.props;
     return (
       <div className="welcome">
         <div className="headline">
@@ -27,6 +48,17 @@ export class Welcom extends Component {
             <br></br>Text von rezept<br></br>Text von rezept<br></br>Text von
             rezept<br></br>Text von rezept<br></br> */}
           </span>
+          <div className="viddiv">
+            <YouTube
+              className="videos"
+              videoId=" "
+              opts={opts}
+              onReady={this.videoOnReady}
+            />
+            <p className="galeritext">
+              xxxxxx
+            </p>
+          </div>
         </div>
 
         <button className="bntgreen" type="submit">

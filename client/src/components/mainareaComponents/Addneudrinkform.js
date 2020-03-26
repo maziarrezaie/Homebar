@@ -17,7 +17,8 @@ export class Addform extends Component {
       menge: "",
       zutat: "",
 
-      cpic: ""
+      cpic: "",
+      cvid: ""
     }
   };
 
@@ -256,10 +257,11 @@ export class Addform extends Component {
             <br></br>
             <label className="fildlable">Video:</label>
             <input
-              className="addfile"
+              className="addfild"
               id="cvid"
-              type="file"
+              type="text"
               onChange={this.changeHandler}
+              placeholder="Youtube Video-ID"
             />
             <br></br>
             <br></br>
@@ -269,6 +271,9 @@ export class Addform extends Component {
               type="submit"
               value="Add this new Drink to the Database"
             />
+            <br></br>
+            <br></br>
+            <br></br>
           </form>
         </div>
         <a href="#top">
