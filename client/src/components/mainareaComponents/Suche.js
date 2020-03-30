@@ -108,7 +108,7 @@ export class Suche extends Component {
             name="staerke_licht"
             id="1"
           >
-            Leicht
+            Normal
           </button>
           <button
             onClick={e => {

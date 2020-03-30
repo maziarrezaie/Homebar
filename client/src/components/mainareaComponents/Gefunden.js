@@ -25,6 +25,7 @@ export class Welcom extends Component {
         autoplay: 2
       }
     };
+    //console.log(this.props.history.location.state.searchResp[0].cname);
 
     // const { videoId } = this.props;
     return (
@@ -43,10 +44,29 @@ export class Welcom extends Component {
           <div className="auwpicres" id="awpic"></div>
           {/* <img className="auwpicres" id="awpic" src={Pic} alt="Thumb" /> */}
           <span className="rezeptrespons" id="rezres">
-            {/* 
-            Text von rezept<br></br>Text von rezept<br></br>Text von rezept
-            <br></br>Text von rezept<br></br>Text von rezept<br></br>Text von
-            rezept<br></br>Text von rezept<br></br> */}
+            {this.props.history.location.state.searchResp.map(drink => (
+              <div>
+                <img
+                  className="auwpicres"
+                  id="awpic"
+                  src={`http://localhost:5000/images/${
+                    drink.cpic.split("__")[1]
+                  }`}
+                  alt="Thumb"
+                />
+                <span>{drink.cname}</span>
+
+                <div className="viddiv">
+                  <YouTube
+                    className="videos"
+                    videoId={drink.cvid}
+                    opts={opts}
+                    onReady={this.videoOnReady}
+                  />
+                  <p className="galeritext">xxxxxx</p>
+                </div>
+              </div>
+            ))}
           </span>
           <div className="viddiv">
             <YouTube
