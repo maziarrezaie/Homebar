@@ -5,18 +5,19 @@ import { Link } from "react-router-dom";
 const axios = require("axios");
 export class Suche extends Component {
   state = {
-    answers: {
+    /* answers: {
       staerke: "",
       geschmack: "",
       basis: "",
       size: ""
-    },
+    }, */
     classes: {
       staerke: ["bntred", "bntred", "bntred", "bntred"],
       geschmack: ["bntred", "bntred", "bntred", "bntred", "bntred", "bntred"],
       basis: ["bntred", "bntred", "bntred", "bntred", "bntred", "bntred"],
       size: ["bntred", "bntred", "bntred", "bntred"]
-    }
+    },
+    answersResponse: null
     /* classList: "bntred" */
   };
   setAnswers = e => {
@@ -28,11 +29,11 @@ export class Suche extends Component {
     });
   };
 
-  getDrinks = () => {
-    axios
-      .get("http://localhost:5000/drinks/filter", this.state.answers)
+  getDrinks = async () => {
+    await axios
+      .post("http://localhost:5000/drinks/filter", this.state.answers)
       .then(res => {
-        console.log(res);
+        this.setState({ answersResponse: res.data });
       });
   };
 
@@ -348,10 +349,20 @@ export class Suche extends Component {
           </button>
         </div>
 
-        <button onClick={this.getDrinks} className="bntgreen" type="submit">
-          <Link to="/gefunden" className="Pagelink">
-            Senden
-          </Link>
+        <button
+          onClick={async () => {
+            await this.getDrinks();
+            this.props.history.push({
+              pathname: "/gefunden",
+              state: { searchResp: this.state.answersResponse }
+            });
+          }}
+          className="bntgreen"
+          type="submit"
+        >
+          {/* <Link to="/gefunden" className="Pagelink"> */}
+          Senden
+          {/* </Link> */}
         </button>
         <br></br>
 

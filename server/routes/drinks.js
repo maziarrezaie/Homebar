@@ -4,14 +4,17 @@ const url = `mongodb+srv://admin:admin123!@cluster0-r0sxn.mongodb.net/likor?retr
 const multer = require("multer");
 
 /* Find a Drink */
-router.get("/filter", (req, res, next) => {
+router.post("/filter", (req, res, next) => {
   MongoClient.connect(url, { useUnifiedTopology: true }, (error, con) => {
     if (error) throw error;
     const dbo = con.db("likor");
     const answers = req.body;
+    console.log("/* Answers: */");
+    console.log(answers);
+    console.log("/* end Answers */");
     dbo
       .collection("drinks")
-      .find(answers)
+      .find(req.body)
       .toArray((err, result) => {
         if (err) throw err;
         console.log(result);
@@ -81,10 +84,12 @@ router.get("/del", (req, res, next) => {
     /* select database */
     var dbo = con.db("likor");
 
-    dbo.collection("drinks").deleteMany({ cname: "" }, (err, result) => {
-      res.send(result);
-      con.close();
-    });
+    dbo
+      .collection("drinks")
+      .deleteMany({ cname: "CocktailName" }, (err, result) => {
+        res.send(result);
+        con.close();
+      });
   });
 });
 

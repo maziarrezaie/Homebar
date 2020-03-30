@@ -119,12 +119,12 @@ export class Addform extends Component {
                 required
               >
                 <option value="">Basis*</option>
-                <option value="Wodka">Wodka</option>
-                <option value="Rum">Rum</option>
-                <option value="Tequila">Tequila</option>
-                <option value="Gin">Gin</option>
-                <option value="Whiskey">Whiskey</option>
-                <option value="Likör">Likör</option>
+                <option value="wodka">Wodka</option>
+                <option value="rum">Rum</option>
+                <option value="tequila">Tequila</option>
+                <option value="gin">Gin</option>
+                <option value="whiskey">Whiskey</option>
+                <option value="likör">Likör</option>
               </select>
 
               <select
@@ -135,9 +135,9 @@ export class Addform extends Component {
               >
                 <option value="">Stärke*</option>
                 <option value="0%ig">0%ig</option>
-                <option value="Licht">Licht</option>
-                <option value="Stark">Stark</option>
-                <option value="Extra-Stark">Extra-Stark</option>
+                <option value="licht">Licht</option>
+                <option value="stark">Stark</option>
+                <option value="extra-stark">Extra-Stark</option>
               </select>
             </div>
             <br></br>
@@ -150,12 +150,12 @@ export class Addform extends Component {
                 required
               >
                 <option value="">Geschmack*</option>
-                <option value="Cremig">Cremig</option>
-                <option value="Fruchtig">Fruchtig</option>
-                <option value="Süss">Süss</option>
-                <option value="Sauer">Sauer</option>
-                <option value="Herb">Herb</option>
-                <option value="Scharf">Scharf</option>
+                <option value="cremig">Cremig</option>
+                <option value="fruchtig">Fruchtig</option>
+                <option value="süss">Süss</option>
+                <option value="sauer">Sauer</option>
+                <option value="herb">Herb</option>
+                <option value="scharf">Scharf</option>
               </select>
               <br></br>
 
@@ -166,10 +166,10 @@ export class Addform extends Component {
                 required
               >
                 <option value="">Size* </option>
-                <option value="Kurz">Kurz</option>
-                <option value="Lang">Lang</option>
-                <option value="Extra-Lang">Extra-Lang</option>
-                <option value="Heiss">Heiss</option>
+                <option value="kurz">Kurz</option>
+                <option value="lang">Lang</option>
+                <option value="extra-lang">Extra-Lang</option>
+                <option value="heiss">Heiss</option>
               </select>
             </div>
             <br></br>
@@ -234,10 +234,10 @@ export class Addform extends Component {
                 required
               >
                 <option value="">Technik* </option>
-                <option value="Shaken">Shaken</option>
-                <option value="Blenden">Blenden</option>
-                <option value="Ruhren">Ruhren</option>
-                <option value="Schichten">Schichten</option>
+                <option value="shaken">Shaken</option>
+                <option value="blenden">Blenden</option>
+                <option value="ruhren">Ruhren</option>
+                <option value="schichten">Schichten</option>
               </select>
               <br></br>
               <select
@@ -247,9 +247,9 @@ export class Addform extends Component {
                 required
               >
                 <option value="">Servie eis*</option>
-                <option value="Wuerfeleis">Wuerfeleis</option>
-                <option value="Crasheis">Crasheis</option>
-                <option value="Ohne Eis">Ohne Eis</option>
+                <option value="wuerfeleis">Wuerfeleis</option>
+                <option value="crasheis">Crasheis</option>
+                <option value="ohne eis">Ohne Eis</option>
               </select>
             </div>
             <br></br>
