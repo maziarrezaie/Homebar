@@ -12,18 +12,12 @@ export class Footer extends Component {
 
         <div className="socialnet">
           <a href="mailto:mail@gilanis.de">
-            <img className="footicon" src={Mail} alt="E-Mail" alt="E-Mail" />
+            <img className="footicon" src={Mail} alt="E-Mail" />
           </a>
-          <a
-            href="https://www.instagram.com/tayo_no_hikari/?hl=de"
-            target="_blank"
-          >
+          <a href="https://www.instagram.com/tayo_no_hikari/?hl=de">
             <img className="footicon" src={Insta} alt="Instergram" />
           </a>
-          <a
-            href="https://www.instagram.com/tayo_no_hikari/?hl=de"
-            target="_blank"
-          >
+          <a href="https://www.instagram.com/tayo_no_hikari/?hl=de">
             <img className="footicon" src={Face} alt="Facebook" />
           </a>
         </div>

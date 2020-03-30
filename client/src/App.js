@@ -1,13 +1,13 @@
 import React from "react";
 
-import "./App.css";
 import Header from "./components/Header";
 import Side from "./components/Side";
-import Sidebar from "./components/Sidebar";
-import Sponsor from "./components/Sponsor";
+//import Sidebar from "./components/Sidebar";
+//import Sponsor from "./components/Sponsor";
 import Footer from "./components/Footer";
 import MainArea from "./components/MainArea";
 import { BrowserRouter as Router } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (

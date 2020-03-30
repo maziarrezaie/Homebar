@@ -25,7 +25,7 @@ export class Loginform extends Component {
       .then(res => {
         console.log(res);
         if (res.data.msg === "user does not exist") {
-          alert(`This user does\'nt exist. Please Register First.`);
+          alert(`This user does'nt exist. Please Register First.`);
           window.location.href = "/register";
         } else if (res.data.token) {
           localStorage.setItem("user", res.data.token);

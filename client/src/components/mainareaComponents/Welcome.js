@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Oben from "../images/nachoben.png";
+//import Oben from "../images/nachoben.png";
 import { Link } from "react-router-dom";
 
 export class Welcom extends Component {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Oben from "../images/nachoben.png";
-import GeschPic from "../images/14A.JPG";
+//import GeschPic from "../images/14A.JPG";
 import EqPic from "../images/01A.JPG";
 import { Link } from "react-router-dom";
 

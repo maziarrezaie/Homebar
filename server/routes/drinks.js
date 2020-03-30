@@ -1,23 +1,14 @@
 const router = require("express").Router();
 const MongoClient = require("mongodb").MongoClient;
-const url = `mongodb+srv://admin:admin123!@cluster0-r0sxn.mongodb.net/test?retryWrites=true&w=majority`;
+const url = `mongodb+srv://admin:admin123!@cluster0-r0sxn.mongodb.net/likor?retryWrites=true&w=majority`;
 const multer = require("multer");
-const path = require("path");
 
+/* Find a Drink */
 router.get("/filter", (req, res, next) => {
   MongoClient.connect(url, { useUnifiedTopology: true }, (error, con) => {
     if (error) throw error;
     const dbo = con.db("likor");
-
-    //To Insert into database
-    /* dbo.collection("drinks").insertOne({base: "gin"}, (err, result)=>{
-     if(err) throw err;
-     console.log(result);
-     con.close()
- }) */
-
     const answers = req.body;
-
     dbo
       .collection("drinks")
       .find(answers)
@@ -30,45 +21,69 @@ router.get("/filter", (req, res, next) => {
   });
 });
 
-router.post("/add", function(req, res, next) {
+/* Add New Drink */
+router.post("/add", (req, res, next) => {
+  MongoClient.connect(url, { useUnifiedTopology: true }, (err, con) => {
+    /* select database */
+    var dbo = con.db("likor");
+
+    dbo.collection("drinks").insertOne(req.body, (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send("drink added successfully");
+      }
+    });
+  });
+});
+
+/* Upload picture into server */
+router.post("/uploadpic", (req, res, next) => {
   var storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, "./public/img/");
+      cb(null, "public/images");
     },
     filename: (req, file, cb) => {
-      cb(null, "IMAGE" + Date.now() + "__" + file.originalname);
+      cb(null, Date.now() + "__" + file.originalname);
     }
   });
 
-  const upload = multer({
-    stoarge: storage
-  }).single("file");
+  var upload = multer({ storage: storage }).single("picture");
+  upload(req, res, err => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("file uploaded successfully!");
+      res.send("file uploaded successfully");
+    }
+  });
+});
 
-  /* console.log(req.body); */
-  MongoClient.connect(url, { useUnifiedTopology: true }, (error, con) => {
-    if (error) throw error;
-    const dbo = con.db("likor");
+/* Get all Drinks */
+router.get("/get", (req, res, next) => {
+  MongoClient.connect(url, { useUnifiedTopology: true }, (err, con) => {
+    /* select database */
+    var dbo = con.db("likor");
 
-    //To Insert into database
-    dbo.collection("drinks").insertOne(req.body, (err, result) => {
-      if (err) throw err;
-      console.log(result);
+    dbo
+      .collection("drinks")
+      .find({})
+      .toArray((err, result) => {
+        res.json(result);
+        con.close();
+      });
+  });
+});
+
+/* Delete all Drinks with cname: 'CocktailName' */
+router.get("/del", (req, res, next) => {
+  MongoClient.connect(url, { useUnifiedTopology: true }, (err, con) => {
+    /* select database */
+    var dbo = con.db("likor");
+
+    dbo.collection("drinks").deleteMany({ cname: "" }, (err, result) => {
+      res.send(result);
       con.close();
-
-      upload(req, res, err => {
-        if (err instanceof multer.MulterError) {
-          return res.status(500).json(err);
-        } else if (err) {
-          return res.status(500).json(err);
-        } else {
-          console.log("FileName: ", req.file.size);
-        }
-      });
-
-      res.send({
-        msg: "drink successfully inserted",
-        result: result
-      });
     });
   });
 });

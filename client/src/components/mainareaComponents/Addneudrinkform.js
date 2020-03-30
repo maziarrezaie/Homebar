@@ -32,13 +32,23 @@ export class Addform extends Component {
   };
 
   changeHandlerFile = e => {
-    this.setState({
-      ...this.state,
-      newDrink: {
-        ...this.state.newDrink,
-        cpic: e.target.files[0]
-      }
-    });
+    try {
+      this.setState({
+        ...this.state,
+        newDrink: {
+          ...this.state.newDrink,
+          cpic: Date.now() + "__" + e.target.files[0].name
+        }
+      });
+
+      var formData = new FormData();
+      formData.append("picture", e.target.files[0]);
+      axios
+        .post("http://localhost:5000/drinks/uploadpic", formData)
+        .then(resp1 => console.log(resp1));
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   zutatenContent = () => {
@@ -250,7 +260,7 @@ export class Addform extends Component {
               className="addfile"
               id="cpic"
               type="file"
-              onChange={this.changeHandler}
+              onChange={this.changeHandlerFile}
               required
             />
             <br></br>

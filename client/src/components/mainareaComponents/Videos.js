@@ -26,7 +26,7 @@ export class Videos extends Component {
       }
     };
 
-    const { videoId } = this.props;
+    /* const videoId = this.props; */
 
     return (
       <div className="welcome">

@@ -83,7 +83,7 @@
 .mitte {
   width: inherit;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-top: 80px;
 }
 .side {
