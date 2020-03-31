@@ -31,13 +31,13 @@ export class Addform extends Component {
     });
   };
 
-  changeHandlerFile = e => {
+  changeHandlerFile = (e, timePrefix) => {
     try {
       this.setState({
         ...this.state,
         newDrink: {
           ...this.state.newDrink,
-          cpic: Date.now() + "__" + e.target.files[0].name
+          cpic: timePrefix + "__" + e.target.files[0].name
         }
       });
 
@@ -261,7 +261,10 @@ export class Addform extends Component {
               className="addfile"
               id="cpic"
               type="file"
-              onChange={this.changeHandlerFile}
+              onChange={() => {
+                const RegTime = Date.now();
+                this.changeHandlerFile(RegTime);
+              }}
               required
             />
             <br></br>

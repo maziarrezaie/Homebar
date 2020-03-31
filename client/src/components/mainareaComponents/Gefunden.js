@@ -41,21 +41,19 @@ export class Welcom extends Component {
         </div>
 
         <div className="ergiebnisres">
-          <div className="auwpicres" id="awpic"></div>
+          {/* <div className="auwpicres" id="awpic"></div> */}
           {/* <img className="auwpicres" id="awpic" src={Pic} alt="Thumb" /> */}
           <span className="rezeptrespons" id="rezres">
             {this.props.history.location.state.searchResp.map(
               (drink, index) => (
-                <div>
+                <div key={index}>
                   <img
                     className="auwpicres"
-                    key={index}
-                    src={`http://localhost:5000/images/${
-                      drink.cpic.split("__")[1]
-                    }`}
+                    src={`http://localhost:5000/images/${drink.cpic}`}
                     alt="Thumb"
                   />
-                  <span>{drink.cname}</span>
+                  <figcaption>{drink.cname}</figcaption>
+                  {/* <span>{drink.cname}</span>
 
                   <div className="viddiv">
                     <YouTube
@@ -65,12 +63,12 @@ export class Welcom extends Component {
                       onReady={this.videoOnReady}
                     />
                     <p className="galeritext">xxxxxx</p>
-                  </div>
+                  </div> */}
                 </div>
               )
             )}
           </span>
-          <div className="viddiv">
+          {/* <div className="viddiv">
             <YouTube
               className="videos"
               videoId=" "
@@ -78,7 +76,7 @@ export class Welcom extends Component {
               onReady={this.videoOnReady}
             />
             <p className="galeritext">xxxxxx</p>
-          </div>
+          </div> */}
         </div>
 
         <button className="bntgreen" type="submit">
