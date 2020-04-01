@@ -124,7 +124,7 @@ export class Addform extends Component {
                 <option value="tequila">Tequila</option>
                 <option value="gin">Gin</option>
                 <option value="whiskey">Whiskey</option>
-                <option value="likör">Likör</option>
+                <option value="likoer">Likör</option>
                 <option value="0%ig">0%ig</option>
               </select>
 
@@ -136,7 +136,7 @@ export class Addform extends Component {
               >
                 <option value="">Stärke*</option>
                 <option value="0%ig">0%ig</option>
-                <option value="normal">normal</option>
+                <option value="normal">Normal</option>
                 <option value="stark">Stark</option>
                 <option value="extra-stark">Extra-Stark</option>
               </select>
@@ -153,7 +153,7 @@ export class Addform extends Component {
                 <option value="">Geschmack*</option>
                 <option value="cremig">Cremig</option>
                 <option value="fruchtig">Fruchtig</option>
-                <option value="süss">Süss</option>
+                <option value="suess">Süss</option>
                 <option value="sauer">Sauer</option>
                 <option value="herb">Herb</option>
                 <option value="scharf">Scharf</option>
