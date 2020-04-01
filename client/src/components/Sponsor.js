@@ -9,16 +9,16 @@ export class Sponsor extends Component {
   render() {
     return (
       <div className="sponsnav">
-        <a href="https://bols.com//">
+        <a href="https://bols.com//" target="_blank">
           <img className="sponslogo" src={Bolslogo} alt="Sponsor Logo" />
         </a>
-        <a href="https://niehoffs-vaihinger.de/">
+        <a href="https://niehoffs-vaihinger.de/" target="_blank">
           <img className="sponslogo" src={Vahingelogo} alt="Vahinger Logo" />
         </a>
-        <a href="https://havana-club.com/en-ww/">
+        <a href="https://havana-club.com/en-ww/" target="_blank">
           <img className="sponslogo" src={Havanalogo} alt="Havana Logo" />
         </a>
-        <a href="https://www.smirnoff.com/de-de/">
+        <a href="https://www.smirnoff.com/de-de/" target="_blank">
           <img className="sponslogo" src={Smirnoflogo} alt="Smirnoff Logo" />
         </a>
       </div>

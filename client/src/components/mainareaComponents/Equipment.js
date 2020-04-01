@@ -4,7 +4,7 @@ import Oben from "../images/nachoben.png";
 import EqPic from "../images/01A.JPG";
 import { Link } from "react-router-dom";
 
-export class Welcom extends Component {
+export class equipment extends Component {
   render() {
     return (
       <div className="welcome">
@@ -77,4 +77,4 @@ export class Welcom extends Component {
   }
 }
 
-export default Welcom;
+export default equipment;

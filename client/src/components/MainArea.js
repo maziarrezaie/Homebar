@@ -13,6 +13,8 @@ import Pasver from "./mainareaComponents/Passabfrage";
 import Chpass from "./mainareaComponents/Changepasswort";
 import List from "./mainareaComponents/Liste";
 import Vid from "./mainareaComponents/Videos";
+import Imp from "./mainareaComponents/impressum";
+import Datensch from "./mainareaComponents/datenschutz";
 
 import { Route } from "react-router-dom";
 
@@ -36,6 +38,8 @@ export class MainArea extends Component {
         <Route path="/changepass" exact component={Chpass} />
         <Route path="/liste" exact component={List} />
         <Route path="/videos" exact component={Vid} />
+        <Route path="/impressum" exact component={Imp} />
+        <Route path="/datenschutz" exact component={Datensch} />
       </div>
     );
   }

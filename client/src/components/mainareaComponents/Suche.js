@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Oben from "../images/nachoben.png";
-import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom"; */
 
 const axios = require("axios");
 export class Suche extends Component {
@@ -30,11 +30,17 @@ export class Suche extends Component {
   };
 
   getDrinks = async () => {
-    await axios
-      .post("http://localhost:5000/drinks/filter", this.state.answers)
-      .then(res => {
-        this.setState({ answersResponse: res.data });
-      });
+    if (localStorage.getItem("user")) {
+      await axios
+        .post("http://localhost:5000/drinks/filter", this.state.answers)
+        .then(res => {
+          this.setState({ answersResponse: res.data });
+        });
+    } else {
+      alert(
+        "Sie sollten sich zuerst anmelden und Sie müssen um sich bei uns registrieren zu konnen volljährig sein, um diese Website betreten zu dürfen. Es gehört zu unserem Engagement für verantwortungsvolles Trinkverhalten."
+      );
+    }
   };
 
   resetBtn = arrayLength => {
@@ -352,17 +358,19 @@ export class Suche extends Component {
         <button
           onClick={async () => {
             await this.getDrinks();
-            this.props.history.push({
-              pathname: "/gefunden",
-              state: { searchResp: this.state.answersResponse }
-            });
+            if (localStorage.getItem("user")) {
+              this.props.history.push({
+                pathname: "/gefunden",
+                state: { searchResp: this.state.answersResponse }
+              });
+            } else {
+              this.props.history.push("/loginform");
+            }
           }}
           className="bntgreen"
           type="submit"
         >
-          {/* <Link to="/gefunden" className="Pagelink"> */}
           Senden
-          {/* </Link> */}
         </button>
         <br></br>
 

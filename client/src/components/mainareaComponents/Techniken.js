@@ -3,7 +3,7 @@ import Oben from "../images/nachoben.png";
 import GeschPic from "../images/14A.JPG";
 import { Link } from "react-router-dom";
 
-export class Welcom extends Component {
+export class mixtechniken extends Component {
   render() {
     return (
       <div className="welcome">
@@ -82,4 +82,4 @@ export class Welcom extends Component {
   }
 }
 
-export default Welcom;
+export default mixtechniken;

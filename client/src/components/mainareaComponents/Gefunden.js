@@ -5,7 +5,7 @@ import Oben from "../images/nachoben.png";
 import { Link } from "react-router-dom";
 import YouTube from "react-youtube";
 
-export class Welcom extends Component {
+export class gefunden extends Component {
   videoOnReady(event) {
     // access to player in all event handlers via event.target
     /* event.target.playVideoAt(50); */
@@ -33,28 +33,39 @@ export class Welcom extends Component {
         <div className="headline">
           <span>gefundene Cocktails</span>
         </div>
-        <div className="gefundenpics" id="gfpics">
-          {/* <img className="thumbpic" src={Pic} alt="Thumb" />
-          <img className="thumbpic" src={Pic2} alt="Thumb" />
-          <img className="thumbpic" src={Pic} alt="Thumb" />
-          <img className="thumbpic" src={Pic2} alt="Thumb" /> */}
-        </div>
+        {/* <div className="gefundenpics" id="gfpics">
+          
+        </div> */}
 
         <div className="ergiebnisres">
-          {/* <div className="auwpicres" id="awpic"></div> */}
-          {/* <img className="auwpicres" id="awpic" src={Pic} alt="Thumb" /> */}
           <span className="rezeptrespons" id="rezres">
             {this.props.history.location.state.searchResp.map(
               (drink, index) => (
-                <div key={index}>
+                <div className="packet" key={index}>
                   <img
                     className="auwpicres"
                     src={`http://localhost:5000/images/${drink.cpic}`}
                     alt="Thumb"
                   />
-                  <figcaption>{drink.cname}</figcaption>
-                  {/* <span>{drink.cname}</span>
+                  <div className="packetText">
+                    <figcaption className="inhalttextLinks">
+                      {drink.cname}
+                    </figcaption>
+                    <br></br>
+                    <figcaption className="inhalttextLinks">
+                      {drink.zutaten.map((elem, index) => (
+                        <React.Fragment>
+                          <span>{elem.menge + " " + elem.zutat}</span>
 
+                          <br></br>
+                        </React.Fragment>
+                      ))}
+                    </figcaption>
+                    <br></br>
+                    <figcaption className="inhalttextLinks">
+                      {drink.zubreitung}
+                    </figcaption>
+                  </div>
                   <div className="viddiv">
                     <YouTube
                       className="videos"
@@ -62,8 +73,10 @@ export class Welcom extends Component {
                       opts={opts}
                       onReady={this.videoOnReady}
                     />
-                    <p className="galeritext">xxxxxx</p>
-                  </div> */}
+                    <p className="galeritext">
+                      {drink.cname + " " + "Lernvideo"}
+                    </p>
+                  </div>
                 </div>
               )
             )}
@@ -95,4 +108,4 @@ export class Welcom extends Component {
   }
 }
 
-export default Welcom;
+export default gefunden;

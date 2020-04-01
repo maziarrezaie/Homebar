@@ -1,6 +1,7 @@
 .app {
   /* background-image: url(../src/components/images/background-desktop-1910x800px-72dpi.jpg); */
   width: 100%;
+  height: 9000px;
   padding: none;
   color: aliceblue;
   background-color: #000000;
@@ -82,6 +83,7 @@
 /* ==============================MITTE============================== */
 .mitte {
   width: inherit;
+  height: auto;
   display: flex;
   justify-content: flex-start;
   margin-top: 80px;
@@ -172,6 +174,7 @@ li:hover {
   /* background-image: url(../src/components/images/background_homebar.png); */
   display: inline-block;
   width: 80%;
+  height: auto;
 }
 .headline {
   background-color: #2b2b2b;
@@ -318,35 +321,7 @@ h5 {
 .nachoben:hover {
   box-shadow: 0px 0px 50px #55f00e;
 }
-.gefundenpics {
-  width: inherit;
-  background-color: rgb(84, 235, 134);
-  padding: 20px;
-}
-.thumbpic {
-  width: 100px;
-  height: auto;
-  border: solid 2px #eceded;
-  box-shadow: 0px 0px 14px #eceded;
-  margin: 20px 10px;
-}
-.ergiebnisres {
-  display: flex;
-  justify-content: center;
-  width: inherit;
-  background-color: rgb(235, 207, 84);
-  padding: 30px;
-}
-.auwpicres {
-  width: 280px;
-  height: auto;
-  border: solid 4px #ee110a;
-  box-shadow: 0px 0px 14px #eceded;
-  margin: 0px 10px;
-}
-.rezeptrespons {
-  color: #1696eb;
-}
+
 .blende {
   width: 54%;
   margin: 40px 20px;
@@ -482,8 +457,9 @@ h5 {
 }
 .viddiv {
   width: 280px;
+  height: 220px;
   border: solid 1px #ffffff;
-  background-color: #2d2d2d;
+  background-color: #000000;
   margin: 8px;
 }
 .viddiv:hover {
@@ -497,6 +473,49 @@ h5 {
 .galeritext {
   color: white;
   margin: 3px 5px;
+}
+.packet {
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #ffffff;
+  margin: 5px 0px 20px 0px;
+  padding: 10px;
+  width: 80%;
+  background-color: #2b2b2b;
+}
+.packetText {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+/* .gefundenpics {
+  width: inherit;
+  background-color: rgb(84, 235, 134);
+  padding: 20px;
+}
+.thumbpic {
+  width: 100px;
+  height: auto;
+  border: solid 2px #eceded;
+  box-shadow: 0px 0px 14px #eceded;
+  margin: 20px 10px;
+} */
+.ergiebnisres {
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  /* background-color: rgb(235, 207, 84); */
+  padding: 30px;
+}
+.auwpicres {
+  width: 30%;
+  height: 30%;
+  border: solid 1px #ffffff;
+  margin: 10px 10px;
+}
+.rezeptrespons {
+  color: #ffffff;
 }
 /* ==============================END MITTE============================== */
 
@@ -517,21 +536,25 @@ h5 {
 }
 .socialnet {
   display: flex;
-  margin-left: 11px;
-  padding: 0;
-  width: 86%;
+  flex-direction: row;
+  padding: 10px;
+  height: 20px;
   justify-content: flex-end;
 }
 .footicon {
-  margin: 10px 0px 10px 40px;
-  height: 20px;
-  max-width: auto;
+  margin: 0px 0px 0px 40px;
+  height: auto;
+  width: 20px;
 }
 .footicon:hover {
   box-shadow: 0px 0px 30px #55f00e;
 }
-
-.footlinkbox {
+.footlink {
+  margin: 0px 0px 0px 40px;
+  color: white;
+  text-decoration: none;
+}
+/* .footlinkbox {
   display: flexbox;
   color: #ffffff;
   height: 30px;
@@ -542,4 +565,4 @@ h5 {
   text-align: right;
   padding-right: 20px;
   padding-top: 10px;
-}
+} */

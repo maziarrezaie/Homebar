@@ -3,7 +3,7 @@ import Oben from "../images/nachoben.png";
 import GeschPic from "../images/hahnenkampf1.jpg";
 import { Link } from "react-router-dom";
 
-export class Welcom extends Component {
+export class geschichte extends Component {
   render() {
     return (
       <div className="welcome">
@@ -67,4 +67,4 @@ export class Welcom extends Component {
   }
 }
 
-export default Welcom;
+export default geschichte;
