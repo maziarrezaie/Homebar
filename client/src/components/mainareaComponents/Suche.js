@@ -111,7 +111,7 @@ export class Suche extends Component {
             }}
             className={`${this.state.classes.staerke[1]}`}
             type="submit"
-            name="staerke_licht"
+            name="staerke_normal"
             id="1"
           >
             Normal
@@ -136,7 +136,7 @@ export class Suche extends Component {
             className={`${this.state.classes.staerke[3]}`}
             id="3"
             type="submit"
-            name="staerke_extraStark"
+            name="staerke_extra-stark"
           >
             Extra-Stark
           </button>
@@ -337,7 +337,7 @@ export class Suche extends Component {
             className={`${this.state.classes.size[2]}`}
             id="2"
             type="submit"
-            name="size_extraLang"
+            name="size_extra-lang"
           >
             Extra-Lang
           </button>

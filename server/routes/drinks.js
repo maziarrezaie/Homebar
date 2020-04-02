@@ -17,7 +17,9 @@ router.post("/filter", (req, res, next) => {
       .find(req.body)
       .toArray((err, result) => {
         if (err) throw err;
-        console.log(result);
+        console.log("/* Request body */");
+        console.log(req.body);
+        console.log("/* End Request body */");
         res.send(result);
         con.close();
       });
@@ -47,7 +49,14 @@ router.post("/uploadpic", (req, res, next) => {
       cb(null, "public/images");
     },
     filename: (req, file, cb) => {
-      cb(null, file.originalname);
+      cb(
+        null,
+        Date.now()
+          .toString()
+          .slice(0, 9) +
+          "__" +
+          file.originalname
+      );
     }
   });
 

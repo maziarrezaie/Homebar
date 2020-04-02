@@ -31,20 +31,21 @@ export class Addform extends Component {
     });
   };
 
-  changeHandlerFile = (e, timePrefix) => {
+  changeHandlerFile = (timePrefix, e) => {
     try {
       this.setState({
         ...this.state,
         newDrink: {
           ...this.state.newDrink,
-          cpic: timePrefix + "__" + e.target.files[0].name
+          cpic:
+            timePrefix.toString().slice(0, 9) + "__" + e.target.files[0].name
         }
       });
 
       var formData = new FormData();
       formData.append("picture", e.target.files[0]);
       axios
-        .post("http://localhost:5000/drinks/uploadpic", formData)
+        .post(`http://localhost:5000/drinks/uploadpic`, formData)
         .then(resp1 => console.log(resp1));
     } catch (err) {
       console.log(err);
@@ -261,9 +262,9 @@ export class Addform extends Component {
               className="addfile"
               id="cpic"
               type="file"
-              onChange={() => {
+              onChange={e => {
                 const RegTime = Date.now();
-                this.changeHandlerFile(RegTime);
+                this.changeHandlerFile(RegTime, e);
               }}
               required
             />

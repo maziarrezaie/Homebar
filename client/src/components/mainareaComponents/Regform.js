@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+const dateDiff = require("date-diff");
 
 const axios = require("axios");
 export class Regform extends Component {
@@ -104,7 +105,9 @@ export class Regform extends Component {
               className="addfild"
               id="ugeburtsdatum"
               type="date"
-              onChange={this.changeHandler}
+              onChange={e => {
+                this.changeHandler(e);
+              }}
               required
             />
             <br></br>
