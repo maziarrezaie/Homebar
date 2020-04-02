@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import Oben from "../images/nachoben.png";
-import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom"; */
 
 export class impressum extends Component {
   render() {

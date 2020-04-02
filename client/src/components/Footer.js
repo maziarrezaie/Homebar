@@ -17,13 +17,13 @@ export class Footer extends Component {
           </a>
           <a
             href="https://www.instagram.com/tayo_no_hikari/?hl=de"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             <img className="footicon" src={Insta} alt="Instergram" />
           </a>
           <a
             href="https://www.instagram.com/tayo_no_hikari/?hl=de"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             <img className="footicon" src={Face} alt="Facebook" />
           </a>
