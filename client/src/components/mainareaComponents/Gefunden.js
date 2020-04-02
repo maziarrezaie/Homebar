@@ -109,3 +109,8 @@ export class gefunden extends Component {
 }
 
 export default gefunden;
+
+/* 
+$("#topbtn").on('click', function() {
+  $(window).scrollTop(0);
+}); */
