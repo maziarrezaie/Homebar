@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Oben from "../images/nachoben.png";
+/* import Oben from "../images/nachoben.png"; */
 /* import { Link } from "react-router-dom"; */
 
 const axios = require("axios");
@@ -15,17 +15,17 @@ export class Suche extends Component {
       staerke: ["bntred", "bntred", "bntred", "bntred"],
       geschmack: ["bntred", "bntred", "bntred", "bntred", "bntred", "bntred"],
       basis: ["bntred", "bntred", "bntred", "bntred", "bntred", "bntred"],
-      size: ["bntred", "bntred", "bntred", "bntred"]
+      size: ["bntred", "bntred", "bntred", "bntred"],
     },
-    answersResponse: null
+    answersResponse: null,
     /* classList: "bntred" */
   };
-  setAnswers = e => {
+  setAnswers = (e) => {
     this.setState({
       answers: {
         ...this.state.answers,
-        [e.target.name.split("_")[0]]: e.target.name.split("_")[1]
-      }
+        [e.target.name.split("_")[0]]: e.target.name.split("_")[1],
+      },
     });
   };
 
@@ -33,7 +33,7 @@ export class Suche extends Component {
     if (localStorage.getItem("user")) {
       await axios
         .post("http://localhost:5000/drinks/filter", this.state.answers)
-        .then(res => {
+        .then((res) => {
           this.setState({ answersResponse: res.data });
         });
     } else {
@@ -43,7 +43,7 @@ export class Suche extends Component {
     }
   };
 
-  resetBtn = arrayLength => {
+  resetBtn = (arrayLength) => {
     var resetedArray = [];
     for (let i = 0; i < arrayLength; i++) {
       resetedArray.push("bntred");
@@ -61,9 +61,9 @@ export class Suche extends Component {
           ...this.state.classes,
           [group]: {
             ...this.resetBtn(arrayLength),
-            [[parseInt(btnElem)]]: "bntredclicked"
-          }
-        }
+            [[parseInt(btnElem)]]: "bntredclicked",
+          },
+        },
       });
     } else {
       this.setState({
@@ -71,9 +71,9 @@ export class Suche extends Component {
           ...this.state.classes,
           [group]: {
             ...this.resetBtn(arrayLength),
-            [[parseInt(btnElem)]]: "bntred"
-          }
-        }
+            [[parseInt(btnElem)]]: "bntred",
+          },
+        },
       });
     }
   };
@@ -93,7 +93,7 @@ export class Suche extends Component {
         <br></br>
         <div id="staerke">
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 4);
             }}
@@ -105,7 +105,7 @@ export class Suche extends Component {
             0%ig
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 4);
             }}
@@ -117,7 +117,7 @@ export class Suche extends Component {
             Normal
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 4);
             }}
@@ -129,7 +129,7 @@ export class Suche extends Component {
             Stark
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 4);
             }}
@@ -148,7 +148,7 @@ export class Suche extends Component {
         <br></br>
         <div id="geschmaeck">
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -160,7 +160,7 @@ export class Suche extends Component {
             Cremig
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -172,7 +172,7 @@ export class Suche extends Component {
             Fruchtig
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -184,7 +184,7 @@ export class Suche extends Component {
             Süss
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -196,7 +196,7 @@ export class Suche extends Component {
             Sauer
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -208,7 +208,7 @@ export class Suche extends Component {
             Herb
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -227,7 +227,7 @@ export class Suche extends Component {
         <br></br>
         <div id="basis">
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -239,7 +239,7 @@ export class Suche extends Component {
             Wodka
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -251,7 +251,7 @@ export class Suche extends Component {
             Rum
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -263,7 +263,7 @@ export class Suche extends Component {
             Tequila
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -275,7 +275,7 @@ export class Suche extends Component {
             Gin
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -287,7 +287,7 @@ export class Suche extends Component {
             Whiskey
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 6);
             }}
@@ -306,7 +306,7 @@ export class Suche extends Component {
         <br></br>
         <div id="size">
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 4);
             }}
@@ -318,7 +318,7 @@ export class Suche extends Component {
             Kurz
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 4);
             }}
@@ -330,7 +330,7 @@ export class Suche extends Component {
             Lang
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 4);
             }}
@@ -342,7 +342,7 @@ export class Suche extends Component {
             Extra-Lang
           </button>
           <button
-            onClick={e => {
+            onClick={(e) => {
               this.setAnswers(e);
               this.fixButton(e, 4);
             }}
@@ -361,8 +361,9 @@ export class Suche extends Component {
             if (localStorage.getItem("user")) {
               this.props.history.push({
                 pathname: "/gefunden",
-                state: { searchResp: this.state.answersResponse }
+                state: { searchResp: this.state.answersResponse },
               });
+              window.scroll({ top: 0, left: 0, behavior: "smooth" });
             } else {
               this.props.history.push("/loginform");
             }
@@ -374,10 +375,10 @@ export class Suche extends Component {
         </button>
         <br></br>
 
-        <a href="#top">
+        {/* <a href="#top">
           {" "}
           <img className="nachoben" src={Oben} alt="Nach oben" />
-        </a>
+        </a> */}
       </div>
     );
   }

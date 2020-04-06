@@ -7,27 +7,76 @@ export class Sidebar extends Component {
     return (
       <ul className="pagenav">
         <Link to="/welcome" className="Pagelink">
-          <li className="nav-link">HOMEBAR</li>
+          <li
+            className="nav-link"
+            onClick={() =>
+              window.scroll({ top: 0, left: 0, behavior: "smooth" })
+            }
+          >
+            HOMEBAR
+          </li>
         </Link>
         <Link to="/suche" className="Pagelink">
-          <li className="nav-link">Cocktail Generator</li>
+          <li
+            className="nav-link"
+            onClick={() =>
+              window.scroll({ top: 0, left: 0, behavior: "smooth" })
+            }
+          >
+            Cocktail Generator
+          </li>
         </Link>
         <Link to="/geschichte" className="Pagelink">
-          <li className="nav-link">Geschichte des Cocktails</li>
+          <li
+            className="nav-link"
+            onClick={() =>
+              window.scroll({ top: 0, left: 0, behavior: "smooth" })
+            }
+          >
+            Geschichte des Cocktails
+          </li>
         </Link>
 
         <Link to="/equipment" className="Pagelink">
-          <li className="nav-link">Equipment für ein Haus-Bar</li>
+          <li
+            className="nav-link"
+            onClick={() =>
+              window.scroll({ top: 0, left: 0, behavior: "smooth" })
+            }
+          >
+            Equipment für ein Haus-Bar
+          </li>
         </Link>
 
         <Link to="/techniken" className="Pagelink">
-          <li className="nav-link">Mix-Techniken</li>
+          <li
+            className="nav-link"
+            onClick={() =>
+              window.scroll({ top: 0, left: 0, behavior: "smooth" })
+            }
+          >
+            Mix-Techniken
+          </li>
         </Link>
         <Link to="/liste" className="Pagelink">
-          <li className="nav-link">Liste aller Cocktails</li>
+          <li
+            className="nav-link"
+            onClick={() =>
+              window.scroll({ top: 0, left: 0, behavior: "smooth" })
+            }
+          >
+            Liste aller Cocktails
+          </li>
         </Link>
         <Link to="/videos" className="Pagelink">
-          <li className="nav-link">Videos</li>
+          <li
+            className="nav-link"
+            onClick={() =>
+              window.scroll({ top: 0, left: 0, behavior: "smooth" })
+            }
+          >
+            Videos
+          </li>
         </Link>
       </ul>
     );

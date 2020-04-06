@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Oben from "../images/nachoben.png";
+/* import Oben from "../images/nachoben.png"; */
 import GeschPic from "../images/hahnenkampf1.jpg";
 import { Link } from "react-router-dom";
 
@@ -53,15 +53,21 @@ export class geschichte extends Component {
         </p>
         <div>
           <button className="bntgreen" type="submit">
-            <Link to="/suche" className="Pagelink">
+            <Link
+              to="/suche"
+              className="Pagelink"
+              onClick={() =>
+                window.scroll({ top: 0, left: 0, behavior: "smooth" })
+              }
+            >
               Cocktail Generator
             </Link>
           </button>
         </div>
-        <a href="#top">
+        {/* <a href="#top">
           {" "}
           <img className="nachoben" src={Oben} alt="Nach oben" />
-        </a>
+        </a> */}
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Oben from "../images/nachoben.png";
+/* import Oben from "../images/nachoben.png"; */
 //import Pic from "../images/gallerieCosmopolitan.png";
 //import Pic2 from "../images/galleriePicasso.png";
 import { Link } from "react-router-dom";
@@ -22,8 +22,8 @@ export class gefunden extends Component {
 
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
-        autoplay: 2
-      }
+        autoplay: 2,
+      },
     };
     //console.log(this.props.history.location.state.searchResp[0].cname);
 
@@ -73,9 +73,7 @@ export class gefunden extends Component {
                       opts={opts}
                       onReady={this.videoOnReady}
                     />
-                    <p className="galeritext">
-                      {drink.cname + " " + "Lernvideo"}
-                    </p>
+                    <p className="galeritext">{`${drink.cname} Lernvideo`}</p>
                   </div>
                 </div>
               )
@@ -99,10 +97,10 @@ export class gefunden extends Component {
         </button>
         <br></br>
 
-        <a href="#top">
+        {/*  <a href="#top">
           {" "}
           <img className="nachoben" src={Oben} alt="Nach oben" />
-        </a>
+        </a> */}
       </div>
     );
   }

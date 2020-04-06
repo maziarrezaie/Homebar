@@ -24,7 +24,13 @@ export class Welcom extends Component {
         </div>
         <div>
           <button className="bntgreen" type="submit">
-            <Link to="/suche" className="Pagelink">
+            <Link
+              to="/suche"
+              className="Pagelink"
+              onClick={() =>
+                window.scroll({ top: 0, left: 0, behavior: "smooth" })
+              }
+            >
               Cocktail Generator
             </Link>
           </button>

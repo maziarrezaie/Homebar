@@ -15,6 +15,7 @@ import List from "./mainareaComponents/Liste";
 import Vid from "./mainareaComponents/Videos";
 import Imp from "./mainareaComponents/impressum";
 import Datensch from "./mainareaComponents/datenschutz";
+import Oben from "./images/nachoben.png";
 
 import { Route } from "react-router-dom";
 
@@ -40,6 +41,26 @@ export class MainArea extends Component {
         <Route path="/videos" exact component={Vid} />
         <Route path="/impressum" exact component={Imp} />
         <Route path="/datenschutz" exact component={Datensch} />
+
+        {/*  <a href="#top">
+          {" "}
+          <img className="nachoben" src={Oben} alt="Nach oben" />
+        </a> */}
+
+        <img
+          className="nachoben"
+          src={Oben}
+          onClick={() => window.scroll({ top: 0, left: 0, behavior: "smooth" })}
+          alt="Nach oben"
+        />
+
+        {/*  <img
+          className="nachoben"
+          id="totop"
+          onClick={scrolling('totop', 'top')}
+          src={Oben}
+          alt="Nach oben"
+        /> */}
       </div>
     );
   }
