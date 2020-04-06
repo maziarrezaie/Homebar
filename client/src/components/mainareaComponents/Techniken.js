@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export class mixtechniken extends Component {
   render() {
     return (
-      <div className="welcome">
+      <div className="maincontainer">
         <div className="headline">
           <span>Why & How to Mix</span>
         </div>

@@ -80,7 +80,7 @@ export class Suche extends Component {
 
   render() {
     return (
-      <div className="welcome">
+      <div className="maincontainer">
         <div className="headline">
           <span>Wie soll der Cocktail sein?</span>
         </div>

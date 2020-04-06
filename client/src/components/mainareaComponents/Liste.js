@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export class Liste extends Component {
   render() {
     return (
-      <div className="welcome">
+      <div className="maincontainer">
         <div className="headline">
           <span>Liste der alle rezepte auf HOMEBAR</span>
         </div>

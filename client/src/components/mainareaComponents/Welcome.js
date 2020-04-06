@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export class Welcom extends Component {
   render() {
     return (
-      <div className="welcome">
+      <div className="maincontainer">
         <div className="headline">
           <span>Wilkommen bei Gilanis Homebar</span>
         </div>

@@ -173,10 +173,13 @@ li:hover {
 }
 
 .mainarea {
-  /* background-image: url(../src/components/images/background_homebar.png); */
   display: inline-block;
   width: 80%;
   height: auto;
+}
+.maincontainer {
+  display: block;
+  text-align: center;
 }
 .headline {
   background-color: #2b2b2b;
@@ -330,10 +333,7 @@ h5 {
   float: right;
   border: 1px solid #726f6f;
 }
-.welcome {
-  display: block;
-  text-align: center;
-}
+
 .addcontainer {
   /* width: 400px; */
   display: flex;

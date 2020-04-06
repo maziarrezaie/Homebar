@@ -29,7 +29,7 @@ export class gefunden extends Component {
 
     // const { videoId } = this.props;
     return (
-      <div className="welcome">
+      <div className="maincontainer">
         <div className="headline">
           <span>gefundene Cocktails</span>
         </div>

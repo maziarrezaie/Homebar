@@ -5,7 +5,7 @@ import React, { Component } from "react";
 export class impressum extends Component {
   render() {
     return (
-      <div className="welcome">
+      <div className="maincontainer">
         <div className="headline">
           <span>IMPRESSUM</span>
         </div>

@@ -21,15 +21,14 @@ export class Videos extends Component {
       height: "180",
 
       playerVars: {
-        // https://developers.google.com/youtube/player_parameters
         autoplay: 2,
       },
     };
 
-    /* const videoId = this.props; */
+
 
     return (
-      <div className="welcome">
+      <div className="maincontainer">
         <div className="headline">
           <span>Videos</span>
         </div>

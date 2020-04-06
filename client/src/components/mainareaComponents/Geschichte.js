@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export class geschichte extends Component {
   render() {
     return (
-      <div className="welcome">
+      <div className="maincontainer">
         <div className="headline">
           <span>Wie ist Cocktail zu stehen gekommen</span>
         </div>
