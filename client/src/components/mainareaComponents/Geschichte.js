@@ -52,7 +52,7 @@ export class geschichte extends Component {
           inzwischen anders aus.
         </p>
         <div>
-          <button className="bntgreen" type="submit">
+          <button className="btngreen" type="submit">
             <Link
               to="/suche"
               className="Pagelink"

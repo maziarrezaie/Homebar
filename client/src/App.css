@@ -207,7 +207,7 @@ h5 {
   text-align: left;
   margin: 10px 20px 0px 20px;
 }
-.bntw {
+.btnw {
   background-color: #eceded;
   border: solid 1px #949494;
   color: #000000;
@@ -215,7 +215,7 @@ h5 {
   padding: 2px 14px;
   margin-bottom: 10px;
 }
-.bntred {
+.btnred {
   background-color: #2d2d2d;
   border: solid 1px #949494;
   color: #eceded;
@@ -224,13 +224,14 @@ h5 {
   padding: 2px 6px;
   margin: 4px;
   margin-bottom: 20px;
+  box-shadow: 2px 2px 3px inset #000000;
 }
-.bntred:hover {
+.btnred:hover {
   background-color: #007206;
   border: solid 1px #eceded;
 }
 
-.bntredclicked {
+.btnredclicked {
   background-color: #000000;
   border: solid 1px #949494;
   color: #eceded;
@@ -254,7 +255,7 @@ h5 {
   background-color: #000000;
   border: solid 1px #e2001a;
 }
-.bntgreen {
+.btngreen {
   background-color: #007206;
   border: solid 1px #949494;
   color: #eceded;
@@ -262,11 +263,11 @@ h5 {
   padding: 0px 20px;
   margin: 10px;
 }
-.bntgreen:hover {
+.btngreen:hover {
   background-color: #007206;
   border: solid 1px #e2001a;
 }
-.bntgray {
+.btngray {
   background-color: #9c9c9c;
   border: solid 1px #ffffff;
   color: #000000;
@@ -274,13 +275,13 @@ h5 {
   padding: 0px 20px;
   margin: 4px;
 }
-.bntgray:hover {
+.btngray:hover {
   background-color: #000000;
   border: solid 1px #ffffff;
   color: #ffffff;
 }
 
-.bntlogin {
+.btnlogin {
   height: 30px;
   background-color: #007206;
   border: solid 1px #949494;
@@ -289,11 +290,11 @@ h5 {
   padding: 0px 20px;
   margin: 4px;
 }
-.bntlogin:hover {
+.btnlogin:hover {
   background-color: black;
   border: solid 1px #007206;
 }
-.bntabbrechen {
+.btnabbrechen {
   height: 30px;
   background-color: #e2001a;
   border: solid 1px #949494;
@@ -302,7 +303,7 @@ h5 {
   padding: 0px 20px;
   margin: 4px;
 }
-.bntabbrechen:hover {
+.btnabbrechen:hover {
   background-color: black;
   border: solid 1px #e2001a;
   color: #eceded;

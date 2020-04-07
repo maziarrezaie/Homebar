@@ -90,9 +90,15 @@ export class gefunden extends Component {
           </div> */}
         </div>
 
-        <button className="bntgreen" type="submit">
-          <Link to="/suche" className="Pagelink">
-            Zurück zu Suche
+        <button className="btngreen" type="submit">
+          <Link
+            to="/suche"
+            className="Pagelink"
+            onClick={() =>
+              window.scroll({ top: 0, left: 0, behavior: "smooth" })
+            }
+          >
+            Zurück zu Cocktail Generator
           </Link>
         </button>
         <br></br>

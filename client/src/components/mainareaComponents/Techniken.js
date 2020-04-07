@@ -67,7 +67,7 @@ export class mixtechniken extends Component {
           die oberste Schichtfläche gehalten wird, gegossen werden.
         </p>
         <div>
-          <button className="bntgreen" type="submit">
+          <button className="btngreen" type="submit">
             <Link
               to="/suche"
               className="Pagelink"

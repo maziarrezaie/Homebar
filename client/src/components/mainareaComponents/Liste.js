@@ -15,7 +15,7 @@ export class Liste extends Component {
           </span>
         </div>
         <div>
-          <button className="bntgreen" type="submit">
+          <button className="btngreen" type="submit">
             <Link
               to="/suche"
               className="Pagelink"

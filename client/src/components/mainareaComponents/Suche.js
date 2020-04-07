@@ -12,13 +12,13 @@ export class Suche extends Component {
       size: ""
     }, */
     classes: {
-      staerke: ["bntred", "bntred", "bntred", "bntred"],
-      geschmack: ["bntred", "bntred", "bntred", "bntred", "bntred", "bntred"],
-      basis: ["bntred", "bntred", "bntred", "bntred", "bntred", "bntred"],
-      size: ["bntred", "bntred", "bntred", "bntred"],
+      staerke: ["btnred", "btnred", "btnred", "btnred"],
+      geschmack: ["btnred", "btnred", "btnred", "btnred", "btnred", "btnred"],
+      basis: ["btnred", "btnred", "btnred", "btnred", "btnred", "btnred"],
+      size: ["btnred", "btnred", "btnred", "btnred"],
     },
     answersResponse: null,
-    /* classList: "bntred" */
+    /* classList: "btnred" */
   };
   setAnswers = (e) => {
     this.setState({
@@ -46,7 +46,7 @@ export class Suche extends Component {
   resetBtn = (arrayLength) => {
     var resetedArray = [];
     for (let i = 0; i < arrayLength; i++) {
-      resetedArray.push("bntred");
+      resetedArray.push("btnred");
     }
     return resetedArray;
   };
@@ -55,13 +55,13 @@ export class Suche extends Component {
     var group = e.target.name.split("_")[0];
     var btnElem = e.target.id;
 
-    if (this.state.classes[group][btnElem] === "bntred") {
+    if (this.state.classes[group][btnElem] === "btnred") {
       this.setState({
         classes: {
           ...this.state.classes,
           [group]: {
             ...this.resetBtn(arrayLength),
-            [[parseInt(btnElem)]]: "bntredclicked",
+            [[parseInt(btnElem)]]: "btnredclicked",
           },
         },
       });
@@ -71,7 +71,7 @@ export class Suche extends Component {
           ...this.state.classes,
           [group]: {
             ...this.resetBtn(arrayLength),
-            [[parseInt(btnElem)]]: "bntred",
+            [[parseInt(btnElem)]]: "btnred",
           },
         },
       });
@@ -87,7 +87,7 @@ export class Suche extends Component {
 
         <br></br>
 
-        <button className="bntw" type="text">
+        <button className="btnw" type="text">
           Stärke:
         </button>
         <br></br>
@@ -142,7 +142,7 @@ export class Suche extends Component {
           </button>
         </div>
 
-        <button className="bntw" type="text">
+        <button className="btnw" type="text">
           Geschmack:
         </button>
         <br></br>
@@ -221,7 +221,7 @@ export class Suche extends Component {
           </button>
         </div>
 
-        <button className="bntw" type="text">
+        <button className="btnw" type="text">
           Basis:
         </button>
         <br></br>
@@ -300,7 +300,7 @@ export class Suche extends Component {
           </button>
         </div>
 
-        <button className="bntw" type="text">
+        <button className="btnw" type="text">
           Size:
         </button>
         <br></br>
@@ -368,7 +368,7 @@ export class Suche extends Component {
               this.props.history.push("/loginform");
             }
           }}
-          className="bntgreen"
+          className="btngreen"
           type="submit"
         >
           Senden

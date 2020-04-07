@@ -23,7 +23,7 @@ export class Welcom extends Component {
           {/* <img src="http://localhost:5000/img/10A.JPG" alt="pic" /> */}
         </div>
         <div>
-          <button className="bntgreen" type="submit">
+          <button className="btngreen" type="submit">
             <Link
               to="/suche"
               className="Pagelink"
