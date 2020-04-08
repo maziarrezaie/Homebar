@@ -20,7 +20,7 @@ export class equipment extends Component {
           größeren Edelstahlbecher und einem kleineren aus dickem Kristallglas.
           Anfänger aufgepasst: So ein Kristallglass ist schneller kaputt, als Du
           gucken kannst; schööön vorsichtig! Ein guter Barkeeper gießt exakt die
-          genaue Menge aus der Hüfte, wer aber nicht so versiert ist, kommt an
+          genaue Menge "aus der Hüfte", wer aber nicht so versiert ist, kommt an
           einem cl-Maß, das im oberen Teil 4cl, im unteren 2cl mißt, nicht
           vorbei. Denn bereits ein kleines Zuviel oder Zuwenig kann einen Drink
           völlig ruinieren, und nichts ist schlimmer als wenn dein Gegenüber
@@ -43,7 +43,7 @@ export class equipment extends Component {
           Oliven, Kirschen oder Perlzwiebeln, die in die jeweiligen Drinks
           gestellt werden. Für unsere Retrofreaks gibt es da noch ein besonderes
           Schmankerl, bei Manufaktum http://www.manufaktum.de gibt es noch echte
-          Stroh-halme... Wenn Du tierisch darauf stehst,Tropical- oder
+          "Stroh"-halme... Wenn Du tierisch darauf stehst,Tropical- oder
           Fruchtdrinks zu mixen, gehört auch ein Blender an die Sonne. Wenn du
           aber nicht wie Wir täglich deinen eigenen huldigen willst (ist halt
           eine Finanzfrage), leih dir bei Muttern einfach einen Küchenmixer.

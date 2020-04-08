@@ -464,6 +464,7 @@ h5 {
   border: solid 1px #ffffff;
   background-color: #000000;
   margin: 8px;
+  padding: 5px;
 }
 .viddiv:hover {
   border: solid 1px #5eaadd;
@@ -492,18 +493,18 @@ h5 {
   flex-direction: column;
   text-align: left;
 }
-/* .gefundenpics {
-  width: inherit;
-  background-color: rgb(84, 235, 134);
-  padding: 20px;
+.modal {
+  background: #686666;
+  border: #333333 solid 0px;
+  border-radius: 5px;
+  margin-left: -200px;
+  text-align:center;
+  z-index: 11;
+  width: 360px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.3);
+
 }
-.thumbpic {
-  width: 100px;
-  height: auto;
-  border: solid 2px #eceded;
-  box-shadow: 0px 0px 14px #eceded;
-  margin: 20px 10px;
-} */
+
 .ergiebnisres {
   display: flex;
   justify-content: center;

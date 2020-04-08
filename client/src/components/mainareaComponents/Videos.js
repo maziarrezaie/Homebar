@@ -1,29 +1,43 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState, useRef } from "react";
 /* import Oben from "../images/nachoben.png"; */
 import { Link } from "react-router-dom";
 import YouTube from "react-youtube";
 
 //https://www.youtube.com/watch?v=BCsFV12JiwI
 
-export class Videos extends Component {
-  videoOnReady(event) {
-    // access to player in all event handlers via event.target
-    /* event.target.playVideoAt(50); */
-    //50 sanieh
-    //event.target.getVideoEmbedCode();
+function Videos() {
+  const outside = useRef();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = (e) => {
+    if (outside.current.contains(e.target)) {
+      return;
+    }
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    const getClick = document.addEventListener('click', handleClick)
+
+    return () => {
+      getClick()
+    }
+  }, [])
+
+  /* videoOnReady((event)=> {
     event.target.pauseVideo();
-    //event.target.playVideoAt(10);
-  }
+  },) */
 
-  render() {
-    const opts = {
-      width: "280",
-      height: "180",
+  const opts = {
+    width: "280",
+    height: "180",
 
-      playerVars: {
-        autoplay: 2,
-      },
-    };
+    playerVars: {
+      autoplay: 2,
+    },
+  };
+  
+   
 
 
 
@@ -33,76 +47,24 @@ export class Videos extends Component {
           <span>Videos</span>
         </div>
 
-        <div className="vidscontainer">
-          <div className="viddiv">
-            <YouTube
-              className="videos"
-              videoId="LQnAnxNkIrk"
-              opts={opts}
-              onReady={this.videoOnReady}
-            />
-            <p className="galeritext">
-              Cocktailbar Casablanca bei Gilaniś Auf Livestyle Teil1: Equipment
-            </p>
-          </div>
-          <div className="viddiv">
-            <YouTube
-              className="videos"
-              videoId="FO9vCfcue_w"
-              opts={opts}
-              onReady={this.videoOnReady}
-            />
-            <p className="galeritext">
-              Cocktailbar Casablanca bei Gilaniś Auf Livestyle Teil2: Tequila
-              Sunrise
-            </p>
-          </div>
-          <div className="viddiv">
-            <YouTube
-              className="videos"
-              videoId="4BcEN41NcdE"
-              opts={opts}
-              onReady={this.videoOnReady}
-            />
-            <p className="galeritext">
-              Cocktailbar Casablanca bei Gilaniś Auf Livestyle Teil3: Mojito
-            </p>
-          </div>
-          <div className="viddiv">
-            <YouTube
-              className="videos"
-              videoId="BOM8EEQyUWI"
-              opts={opts}
-              onReady={this.videoOnReady}
-            />
-            <p className="galeritext">
-              Cocktailbar Casablanca bei Gilaniś Auf Livestyle Teil4:
-              Cosmopolitan
-            </p>
-          </div>
-          <div className="viddiv">
-            <YouTube
-              className="videos"
-              videoId="-dCmqY5yIHA"
-              opts={opts}
-              onReady={this.videoOnReady}
-            />
-            <p className="galeritext">
-              Cocktailbar Casablanca bei Gilaniś Auf Livestyle. "Showeffekt"
-            </p>
-          </div>
-          <div className="viddiv">
-            <YouTube
-              className="videos"
-              videoId="BCsFV12JiwI"
-              opts={opts}
-              onReady={this.videoOnReady}
-            />
+        <div className="vidscontainer" ref={outside}>
+        {isOpen ? (
+              <div className="modal">
+                <p>MODAL IS OPEN</p>
+              </div>
+            ) : null}
+          <div className="viddiv" onClick={() => setIsOpen(!isOpen)}>
+            
+            <Link to="/videos/?vid=BCsFV12JiwI">
+              <img
+                src="//i1.ytimg.com/vi/BCsFV12JiwI/mqdefault.jpg"
+                className="img-responsive"
+              />
+            </Link>
             <p className="galeritext">Gilaniś Cocktails an Bocholter Markt</p>
           </div>
-          {/* <div className="videos">
-            <video width="320" height="240" controls></video>
-          </div> */}
+
+          {/*  ================================================================ */}
         </div>
         <div>
           <button className="btngreen" type="submit">
@@ -117,13 +79,9 @@ export class Videos extends Component {
             </Link>
           </button>
         </div>
-        {/*  <a href="#top">
-          {" "}
-          <img className="nachoben" src={Oben} alt="Nach oben" />
-        </a> */}
       </div>
     );
   }
-}
+
 
 export default Videos;

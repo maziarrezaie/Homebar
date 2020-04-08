@@ -36,16 +36,16 @@ export class geschichte extends Component {
           Gruppen einzuordnen. Da gibt es die Shortdrinks, die in Before- und
           After-Dinner-Drinks wiederum unterteilt sind. Sie zeichnen sich durch
           viel Stoff und wenig Beiwerk aus, also wenig im Glas, aber viel im
-          Kopf! Mit Säften und Limonaden gepanschte, ähh, gestreckte Alkoholika
+          Kopf! Mit Säften und Limonaden "gepanschte", ähh, gestreckte Alkoholika
           schimpfen sich Longdrinks. Und um die Leser dieses Buches vollends zu
           verwirren, werden Short- und Longdrinks je nach Zubereitungsart,
           Zutaten und Verwendung in inzwischen ca. 30 Gruppen eingeteilt, die
           sich zu verschiedenen Gelegenheiten anbieten. Kommen wir mal zurück
           nach Deutschland. Hier erhielt der Cocktail seinen Stellenwert erst in
-          den 50Žern weil wir nun mal ein Volk von Bier und Schnappestrinkern
+          den 50igern weil wir nun mal ein Volk von Bier und Schnappestrinkern
           waren, und wat der Buur nicht kennt, dat freet der nicht! Was in
           London, Paris und New York also schon lääängs an der Tagesordnung war,
-          fand Germany erst wirklich abgefahren und kultig in den 70Žern,
+          fand Germany erst wirklich abgefahren und kultig in den 70igern,
           dadurch wuchs natürlich auch der Anteil an internationalen Getränken
           und die Bar, so wie wir sie heute kennen, hat sich einen festen Platz
           in der Gastronomie erobert, nur die Hahnenkämpfe sehen irgendwie
