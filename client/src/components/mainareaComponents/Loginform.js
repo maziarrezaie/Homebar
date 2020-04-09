@@ -84,13 +84,13 @@ export class Loginform extends Component {
             <div className="logorout">
               <Link to="/welcome">
                 <input
-                  className="bntabbrechen"
+                  className="btnabbrechen"
                   type="button"
                   value="Abbrechen"
                 />
               </Link>
               <input
-                className="bntlogin"
+                className="btnlogin"
                 type="submit"
                 value="Jetzt Einlogen"
               />

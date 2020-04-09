@@ -373,12 +373,8 @@ export class Suche extends Component {
         >
           Senden
         </button>
-        <br></br>
 
-        {/* <a href="#top">
-          {" "}
-          <img className="nachoben" src={Oben} alt="Nach oben" />
-        </a> */}
+
       </div>
     );
   }

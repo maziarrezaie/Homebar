@@ -65,12 +65,12 @@ export class Passabfrage extends Component {
             <div className="logorout">
               <Link to="/welcome">
                 <input
-                  className="bntabbrechen"
+                  className="btnabbrechen"
                   type="button"
                   value="Abbrechen"
                 />
               </Link>
-              <input className="bntlogin" type="submit" value="Code Abfragen" />
+              <input className="btnlogin" type="submit" value="Code Abfragen" />
               {/* <Link to="/register">
                 <input className="bntgray" type="button" value="Registrieren" />
               </Link> */}
