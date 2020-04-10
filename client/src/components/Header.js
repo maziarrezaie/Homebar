@@ -36,7 +36,7 @@ export class Header extends Component {
           </div>
         )}
 
-        {/* <div className="redlinetop"></div> */}
+        
       </div>
     );
   }

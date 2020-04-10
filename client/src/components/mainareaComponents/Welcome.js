@@ -11,14 +11,27 @@ export class Welcom extends Component {
         </div>
         <div className="addcontainer">
           <span className="inhalttextCentriert">
-            hier kannst du aus die Cocktails die sich auf unsere Seite befinden
-            mit deiner eigene Vorstellung und Auswahlverfahren Rezepte suchen,
-            diese nach bedarf auf dein Account speichern oder ausdrucken.
+            Hi, hier kannst du aus die Cocktails die sich auf unsere Datenbank
+            befinden per Auswahlverfahren Rezepte suchen die deine vorstellung
+            entsprechen.
             <br />
-            Zu dem kannst Du unter Menü interessante sachen rund um Cocktails
-            finden.
             <br />
-            Wir wünschen dir viel Spaß!
+            Zu dem bekommst du interessante infos rund um das Kunst des
+            BARKIPPING, Gechichte des Cocktails und was du noch so über Cocktail
+            wiessen soltest. Ich zeige dir auch was du für deine classische
+            Homebar brauchst.
+            <br />
+            Auch interessant für angehende Barkipper!
+            <br />
+            <br />
+            Guck die auch unsere Videos an. Da sind hin und wieder tips und
+            tricks zu sehen die dir eventuell nutzlich sein konnen.
+            <br />
+            <br />
+            Ich wünschen dir viel Spaß!
+            <br />
+            <br />
+            dein Farshid
           </span>
           {/* <img src="http://localhost:5000/img/10A.JPG" alt="pic" /> */}
         </div>

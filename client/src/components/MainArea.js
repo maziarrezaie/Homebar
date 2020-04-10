@@ -15,7 +15,7 @@ import List from "./mainareaComponents/Liste";
 import Vid from "./mainareaComponents/Videos";
 import Imp from "./mainareaComponents/impressum";
 import Datensch from "./mainareaComponents/datenschutz";
-import Oben from "./images/nachoben.png";
+import Oben from "./images/oben.png";
 
 import { Route } from "react-router-dom";
 
