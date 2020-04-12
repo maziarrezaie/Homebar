@@ -21,21 +21,20 @@ export class mixtechniken extends Component {
         <div className="headline">
           <span>Why & How to Mix</span>
         </div>
-        
-       
+
         <img className="blendesh" src={MixPic} alt="Hahnen Schwanz" />
         <div className="howtomix">
-          <img className="spic" src={Spica} alt="Mix Step"/>
-          <img className="spic" src={Spicb} alt="Mix Step"/>
-          <img className="spic" src={Spicc} alt="Mix Step"/>
-          <img className="spic" src={Spicd} alt="Mix Step"/>
-          <img className="spic" src={Spice} alt="Mix Step"/>
-          <img className="spic" src={Spicf} alt="Mix Step"/>
-          <img className="spic" src={Spicg} alt="Mix Step"/>
-          <img className="spic" src={Spich} alt="Mix Step"/>
-          <img className="spic" src={Spici} alt="Mix Step"/>
-          <img className="spic" src={Spicj} alt="Mix Step"/>
-          <img className="spic" src={Spick} alt="Mix Step"/>
+          <img className="spic" src={Spica} alt="Mix Step" />
+          <img className="spic" src={Spicb} alt="Mix Step" />
+          <img className="spic" src={Spicc} alt="Mix Step" />
+          <img className="spic" src={Spicd} alt="Mix Step" />
+          <img className="spic" src={Spice} alt="Mix Step" />
+          <img className="spic" src={Spicf} alt="Mix Step" />
+          <img className="spic" src={Spicg} alt="Mix Step" />
+          <img className="spic" src={Spich} alt="Mix Step" />
+          <img className="spic" src={Spici} alt="Mix Step" />
+          <img className="spic" src={Spicj} alt="Mix Step" />
+          <img className="spic" src={Spick} alt="Mix Step" />
         </div>
         <p className="inhalttextLinksBig">
           Es gibt verschiedene Methoden, um ein Getränk zu mixen, die ich in
@@ -95,7 +94,7 @@ export class mixtechniken extends Component {
           Zutaten langsam auf die Rückseite des Barlöffels, der ganz dicht auf
           die oberste Schichtfläche gehalten wird, gegossen werden.
         </p>
-        
+
         <div>
           <button className="btngreen" type="submit">
             <Link

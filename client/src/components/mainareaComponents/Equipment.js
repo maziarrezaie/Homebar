@@ -61,7 +61,7 @@ export class equipment extends Component {
           deinen eigenen huldigen willst (ist halt eine Finanzfrage), leih dir
           bei Muttern einfach einen Küchenmixer. Eisbehälter, Eiszange oder
           Barschaufel gehören ebenfalls in deine Grundausstattung. Was Du an
-          weiterenm Equipment zum Mixen brauchst, gibtŽs ebenfalls bei Mutter.
+          weiterenm Equipment zum Mixen brauchst, gibt's ebenfalls bei Mutter.
           <br />
           <br />
           Vom Schneidbrett und Obst-Messer über Korkenzieher, Zitruspresse und
