@@ -60,7 +60,7 @@ export class gefunden extends Component {
                   </div>
                   <div className="viddiv">
                     <YouTube
-                      className="videos"
+                      className="videosgefunden"
                       videoId={drink.cvid}
                       opts={opts}
                       onReady={this.videoOnReady}

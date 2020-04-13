@@ -48,7 +48,7 @@ function Videos() {
       {/* ==============================MODAL===================================== */}
       <div className="vidscontainer" ref={outside}>
         {isOpen ? (
-          <React.Fragment className="modalpack">
+          <div className="modalisinside">
             <div className="modal">
               <div className="close">
                 <Link to="/videos">
@@ -74,7 +74,7 @@ function Videos() {
                 setIsOpen(false);
               }}
             ></div>
-          </React.Fragment>
+          </div>
         ) : null}
         {/* =========================================================================== */}
         <div className="viddiv" onClick={() => setIsOpen(!isOpen)}>
