@@ -1,11 +1,8 @@
 import React, { Component, useEffect, useState, useRef } from "react";
-/* import Oben from "../images/nachoben.png"; */
 import { Link } from "react-router-dom";
 import YouTube from "react-youtube";
 import Close from "../images/close.png";
 const queryString = require("query-string");
-//const data;
-//https://www.youtube.com/watch?v=BCsFV12JiwI
 function videoOnReady(event) {
   event.target.pauseVideo();
 }
@@ -22,6 +19,7 @@ function Videos() {
       return;
     }
     setIsOpen(false);
+    window.location.href = "/videos";
   };
 
   useEffect(() => {
@@ -46,6 +44,7 @@ function Videos() {
         <span>Videos</span>
       </div>
       {/* ==============================MODAL===================================== */}
+
       <div className="vidscontainer" ref={outside}>
         {isOpen ? (
           <div className="modalisinside">
